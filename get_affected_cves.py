@@ -87,4 +87,4 @@ for cve in cves:
                     [ rel.get(k) for k in package_want_keys[:-1] ]
                 )
 
-    print(data.get('name', cve), "\n红帽有修复", affected_releases, "\n红帽无修复: ", package_states)
+    print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
