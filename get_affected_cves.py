@@ -89,21 +89,23 @@ for cve in cves:
     if "affected_release" in data:
         for rel in data.get("affected_release", []):
             prd_name = rel.get("product_name")
-            if prd_name in want_rhels_MA: 
+            if prd_name in want_rhels_MA:
+                rel_to_add = [ rel.get(k) for k in affected_want_keys[1:] ] 
                 #针对修复部分构建字典,是否已有该版本,没有添加键值对,有的话追加该键值
-                if prd_name not in affected_releases:   
-                    affected_releases[prd_name] = [[ rel.get(k) for k in affected_want_keys[1:] ]]
-                else:
-                    affected_releases[prd_name].append([ rel.get(k) for k in affected_want_keys[1:] ])
+                if prd_name not in affected_releases:                     
+                    affected_releases[prd_name] = [rel_to_add]
+                elif rel_to_add not in affected_releases[prd_name]: # Append if not exist yet. To avoid duplicate date retrived.
+                    affected_releases[prd_name].append(rel_to_add)
 
     if "package_state" in data:
         for rel in data.get("package_state", []):
             prd_name = rel.get("product_name")
             if prd_name in want_rhels_MA and rel.get("fix_state") in fix_states:
+                rel_to_add = [ rel.get(k) for k in package_want_keys[1:-1] ]
                 #针对无修复部分构建字典,是否已有该版本,没有添加键值对,有的话追加该键值
                 if prd_name not in package_states:   
-                    package_states[prd_name] = [[ rel.get(k) for k in package_want_keys[1:-1] ]]
-                else:
-                    package_states[prd_name].append([ rel.get(k) for k in package_want_keys[1:-1] ])
+                    package_states[prd_name] = [rel_to_add]
+                elif rel_to_add not in package_states[prd_name]: # Append if not exist yet. To avoid duplicate date retrived.
+                    package_states[prd_name].append(rel_to_add)
 
     print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
