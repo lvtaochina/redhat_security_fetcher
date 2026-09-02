@@ -83,23 +83,27 @@ for cve in cves:
         print(cve + ' does not affect Red Hat software.')
         continue
 
-    affected_releases = []
-    package_states = []
+    affected_releases = {}
+    package_states = {}
 
     if "affected_release" in data:
         for rel in data.get("affected_release", []):
-            if rel.get("product_name") in want_rhels_MA:
-                affected_releases.append(
-               #     { k:rel.get(k) for k in affected_want_keys}
-                    [ rel.get(k) for k in affected_want_keys ]
-                )
+            prd_name = rel.get("product_name")
+            if prd_name in want_rhels_MA: 
+                #针对修复部分构建字典,是否已有该版本,没有添加键值对,有的话追加该键值
+                if prd_name not in affected_releases:   
+                    affected_releases[prd_name] = [[ rel.get(k) for k in affected_want_keys[1:] ]]
+                else:
+                    affected_releases[prd_name].append([ rel.get(k) for k in affected_want_keys[1:] ])
 
     if "package_state" in data:
         for rel in data.get("package_state", []):
-            if rel.get("product_name") in want_rhels_MA and rel.get("fix_state") in fix_states:
-                package_states.append(
-               #     { k:rel.get(k) for k in package_want_keys[:]}
-                    [ rel.get(k) for k in package_want_keys[:] ]
-                )
+            prd_name = rel.get("product_name")
+            if prd_name in want_rhels_MA and rel.get("fix_state") in fix_states:
+                #针对无修复部分构建字典,是否已有该版本,没有添加键值对,有的话追加该键值
+                if prd_name not in package_states:   
+                    package_states[prd_name] = [[ rel.get(k) for k in package_want_keys[1:-1] ]]
+                else:
+                    package_states[prd_name].append([ rel.get(k) for k in package_want_keys[1:-1] ])
 
     print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
