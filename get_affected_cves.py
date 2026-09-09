@@ -37,6 +37,15 @@ def get_data(query):
         return None
 
     return data
+    
+def print_rhel_table(d):
+    for rhel_ver, item_list in d.items():
+        print(f"\n----{rhel_ver}----")
+  #      print(f"{'组件':<92}{'RHSA勘误编号':<20}")
+        print(f"{'组件 / RHSA勘误编号'}")
+  #      print("-" * 35)
+        for pkg, rhsa in item_list:
+            print(f"{pkg:<85}{rhsa:<20}")
 
 BASE_DIR = Path(__file__).resolve().parent
 CVES_PATH = BASE_DIR / 'input' / 'cves.txt'
@@ -56,11 +65,10 @@ want_rhels_MA = {
                 "Red Hat Enterprise Linux 8.10"
                 }
 
-# uncomment the following lines if you want to include RHEL 9 and RHEL 9.6 in the search
-#want_rhels_CCBP = {
-#                "Red Hat Enterprise Linux 9", 
-#                "Red Hat Enterprise Linux 9.6", 
-#                }
+want_rhels_CCBP = {
+                "Red Hat Enterprise Linux 9", 
+                "Red Hat Enterprise Linux 9.6", 
+                }
 
 fix_states = {
                 "Affected",
@@ -71,7 +79,7 @@ fix_states = {
                 }                          
 
 for cve in cves:
-    print('*' * 50)
+    print('\n'+'*' * 100)
     endpoint = '/cve/' + cve + '.json'
     data = get_data(endpoint)
 
@@ -101,11 +109,15 @@ for cve in cves:
         for rel in data.get("package_state", []):
             prd_name = rel.get("product_name")
             if prd_name in want_rhels_MA and rel.get("fix_state") in fix_states:
-                rel_to_add = [ rel.get(k) for k in package_want_keys[1:-1] ]
+                rel_to_add = [ rel.get(k) for k in package_want_keys[1:] ]
                 #针对无修复部分构建字典,是否已有该版本,没有添加键值对,有的话追加该键值
                 if prd_name not in package_states:   
                     package_states[prd_name] = [rel_to_add]
                 elif rel_to_add not in package_states[prd_name]: # Append if not exist yet. To avoid duplicate date retrived.
                     package_states[prd_name].append(rel_to_add)
-
-    print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
+                          
+    #print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
+    print(data.get('name', cve))
+    print(data.get('threat_severity', 'NO threat_severity FOUND'), data.get('public_date', 'NO public_date FOUND')[0:10])
+    print_rhel_table(affected_releases)
+   # print_rhel_table(package_states)    
