@@ -47,7 +47,7 @@ package_keys = [
 
 
 """
-get_data(endpoint: str)
+get_data(endpoint: str) -> dict | None:
 函数职责：从指定端点获取数据
 
 参数：
@@ -65,7 +65,7 @@ get_data(endpoint: str)
     成功 → JSON 数据
     失败 → None
 """
-def get_data(endpoint: str):
+def get_data(endpoint: str) -> dict | None:
 
     full_query = API_HOST + endpoint
     try:
@@ -92,11 +92,35 @@ def get_data(endpoint: str):
 
 
 """
-filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], affected_want_keys: list[str], package_want_keys: list[str]) -> tuple[dict, dict]
+add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
+函数职责：
+    添加指定key/value到字典
+输入：
+    字典;字典的每个值是列表
+    字典的键
+    要添加到该键对应列表里的值
+处理：
+    按指定 key 将 value 添加到字典;如果key不存在则创建列表,如果 value 已存在则不重复添加
+    - 不是对整个 dict 做“去重”,而是每一个key对应的value列表内部去重
+返回: None
+"""
+def add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
+    if key not in d:
+        d[key] = [value]
+    elif value not in d[key]:
+        d[key].append(value)
+
+
+"""
+filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], 
+                    affected_want_keys: list[str], package_want_keys: list[str]) \
+                    -> tuple[dict[str, list[list[str]]], 
+                             dict[str, list[list[str]]]
+                             ]
 函数职责：
     处理一个 CVE API 响应数据，
     从中筛选指定 RHEL 版本的受影响数据。
-    可进一步抽象本函数?
+    - 目前无需进一步抽象；两个数据来源业务含义不同，分别处理更清晰。
 
 输入：
     一个 CVE 对应的 JSON 数据
@@ -115,32 +139,28 @@ filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], affecte
         ├── 有 FIX 的数据
         └── 无 FIX 的数据
 """
-def filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], affected_keys: list[str], package_keys: list[str]) -> tuple[dict, dict]:
+def filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str],
+                      affected_keys: list[str], package_keys: list[str]) \
+                      -> tuple[dict[str, list[list[str]]], 
+                               dict[str, list[list[str]]]
+                               ]:
     # Implementation for filtering RHEL data
     affected_releases = {}
     package_states = {}
 
-    if "affected_release" in data:
-        for rel in data.get("affected_release", []):
-            prd_name = rel.get("product_name")
-            if prd_name in want_rhels:
-                rel_to_add = [ rel.get(k) for k in affected_keys[1:] ] 
-                #用有修复的数据构建字典；是否已有该版本数据,没有的话添加新的键值对,有的话直接追加数据
-                if prd_name not in affected_releases:                     
-                    affected_releases[prd_name] = [rel_to_add]
-                elif rel_to_add not in affected_releases[prd_name]: # Append with de-duplication.
-                    affected_releases[prd_name].append(rel_to_add)
+    for rel in data.get("affected_release", []):
+        prd_name = rel.get("product_name")
+        if prd_name in want_rhels:
+            rel_to_add = [ rel.get(k) for k in affected_keys[1:] ] 
+            #用有修复的数据构建字典；是否已有该版本数据,没有的话添加新的键值对,有的话直接追加数据
+            add_to_dict(affected_releases, prd_name, rel_to_add)
 
-    if "package_state" in data:
-        for rel in data.get("package_state", []):
-            prd_name = rel.get("product_name")
-            if prd_name in want_rhels and rel.get("fix_state") in fix_states:
-                rel_to_add = [ rel.get(k) for k in package_keys[1:] ]
-                #用无修复的数据构建字典；是否已有该版本数据,没有的话添加新的键值对,有的话直接追加数据
-                if prd_name not in package_states:   
-                    package_states[prd_name] = [rel_to_add]
-                elif rel_to_add not in package_states[prd_name]: # Append with de-duplication.
-                    package_states[prd_name].append(rel_to_add)    
+    for rel in data.get("package_state", []):
+        prd_name = rel.get("product_name")
+        if prd_name in want_rhels and rel.get("fix_state") in fix_states:
+            rel_to_add = [ rel.get(k) for k in package_keys[1:] ]
+            #用无修复的数据构建字典；是否已有该版本数据,没有的话添加新的键值对,有的话直接追加数据
+            add_to_dict(package_states, prd_name, rel_to_add)
 
     return affected_releases, package_states
 
@@ -192,7 +212,6 @@ main()
         展示安全数据
     返回: None
 """
-
 def main() -> None:
     cves = read_cves()
 
@@ -205,15 +224,17 @@ def main() -> None:
             print(f"{cve}: skipped or no data")
             continue
 
-        if data.get('message') == 'Not Found' or ('package_state' not in data and 'affected_release' not in data):
+        if data.get('message') == 'Not Found' or ('package_state' not in data and \
+                                                  'affected_release' not in data):
             print(cve + ' does not affect Red Hat software.')
             continue
 
-        affected_releases = filter_rhel_data(data, want_rhels, fix_states, affected_keys, package_keys)[0]
-                        
+        affected_releases, package_states = filter_rhel_data(data, want_rhels, fix_states, affected_keys, package_keys)
+
         #print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
         print(data.get('name', cve))
-        print(data.get('threat_severity', 'NO threat_severity FOUND'), data.get('public_date', 'NO public_date FOUND')[0:10])
+        print(data.get('threat_severity', 'NO threat_severity FOUND'), 
+              data.get('public_date', 'NO public_date FOUND')[0:10])
         if affected_releases:
             print_rhel_table(affected_releases)
         else:
@@ -222,6 +243,7 @@ def main() -> None:
         #   print_rhel_table(package_states)
         #else:
          #  print("无修复部分: 红帽相关版本产品不受影响")
+
 
 if __name__ == "__main__":
     main()
