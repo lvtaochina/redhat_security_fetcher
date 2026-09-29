@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-# import sys
+from enum import Enum, auto
+import sys
+from dataclasses import dataclass
 import requests
 # from datetime import datetime, timedelta
 from pathlib import Path
@@ -45,50 +47,58 @@ package_keys = [
                 "fix_state",
                 ]
 
+class DataError(Enum):
+    NO_DATA = auto()
+    INVALID_JSON = auto()
+    HTTP_ERROR = auto()
+    REQUEST_EXCEPTION = auto()
+
+@dataclass
+class DataResult:
+    data: dict | None
+    error: DataError | None
+    status_code: int | None
+
 
 """
-get_data(endpoint: str) -> dict | None:
+get_data(endpoint: str) -> DataResult:
 函数职责：从指定端点获取数据
-
 参数：
     endpoint: str
     例如：
     "/cve/CVE-2026-1234.json"
-
 处理(包含异常处理):
-    1. 使用 requests 发起 HTTP 请求
+    1. 使用 requests 发起 HTTP 请求并返回数据
     2. 检查 HTTP 状态码
     3. 将响应转换为 JSON
     4. 检查返回数据是否为空
-
 返回：
-    成功 → JSON 数据
-    失败 → None
+    DataResult 对象，包含：
+        - data: dict | None
+        - error: DataError | None
+        - status_code: int | None
 """
-def get_data(endpoint: str) -> dict | None:
+def get_data(endpoint: str) -> DataResult:
 
     full_query = API_HOST + endpoint
+
     try:
         r = requests.get(full_query, proxies=PROXIES, timeout=20)
-    except requests.RequestException as e:
-        print(f"Error fetching data for {endpoint}: {e}")
-        return None
+    except requests.RequestException:
+        return DataResult(data=None, error=DataError.REQUEST_EXCEPTION, status_code=None)   
 
     if r.status_code != 200:
-        print(f"HTTP {r.status_code} for {full_query}")
-        return None
+        return DataResult(data=None, error=DataError.HTTP_ERROR, status_code=r.status_code)
     
     try:
         data = r.json()
     except ValueError:
-        print(f"Invalid JSON response for {full_query}")
-        return None
+        return DataResult(data=None, error=DataError.INVALID_JSON, status_code=r.status_code)
 
     if not data:
-        print(f'No data returned for {full_query}')
-        return None
+        return DataResult(data=None, error=DataError.NO_DATA, status_code=r.status_code)
 
-    return data
+    return DataResult(data=data, error=None, status_code=r.status_code)
 
 
 """
@@ -182,59 +192,75 @@ def print_rhel_table(d:dict[str, list[list[str]]]) -> None:
 
 """
 read_cves()
-    函数职责: 将CVE ID列表文件读入到一个list
+    函数职责: 将包含“CVE ID”的文件读入list
     参数: N/A
     数据来源: input/cves.txt
     处理：逐行读取，去除空白，忽略空行
     返回: list[str]
-    如果input/cves.txt不存在或cves.txt为空,read_cves() &调用者如何协同？ 
+    异常:input/cves.txt不存在 -> 异常自然传播
+         cves.txt为空 -> 由main()处理
+         文件打不开→相应的 OSError ->异常自然传播 
+         文件编码有问题→UnicodeDecodeError ->异常自然传播
+         cves.txt内容或格式非法 -> todo 
 """
 def read_cves() -> list[str]:
     cves_path = Path(__file__).resolve().parent / 'input' / 'cves.txt'
-    try:
-        with cves_path.open('r', encoding='utf-8') as f:
-            cves = [line.strip() for line in f if line.strip()]
-    except FileNotFoundError:
-        print("Error: input/cves.txt not found.")
-        return []
+    with cves_path.open('r', encoding='utf-8') as f:
+        cves = [line.strip() for line in f if line.strip()]
     return cves
 
 
 """
 main()
     函数职责: 主函数, 用于执行CVE数据获取和过滤逻辑
+             * 未设计重试机制, 仅返回错误信息
     参数: N/A
     数据来源: input/cves.txt
     处理: 
         读取CVE数据文件
+        处理相关异常
+        - 文件不存在
+        - 文件内容为空
         从红帽官网获取CVE完整安全数据
         过滤所需的安全数据
         展示安全数据
+    暂不处理：
+        文件打不开→相应的 OSError ->异常自然传播
+        文件编码有问题→UnicodeDecodeError ->异常自然传播
     返回: None
 """
 def main() -> None:
-    cves = read_cves()
+    try:
+        cves = read_cves()
+    except FileNotFoundError:
+        print(f"Error: input/cves.txt not found", file=sys.stderr)
+        return
+    if not cves:
+        print("Error: input/cves.txt is empty.", file=sys.stderr)
+        return
 
     for cve in cves:
         print('\n'+'*' * 100)
         endpoint = '/cve/' + cve + '.json'
-        data = get_data(endpoint)
-
-        if data is None:
-            print(f"{cve}: skipped or no data")
+        result = get_data(endpoint)
+    
+        if result.error is not None:
+            print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
             continue
 
-        if data.get('message') == 'Not Found' or ('package_state' not in data and \
-                                                  'affected_release' not in data):
+        cve_data = result.data
+
+        if cve_data.get('message') == 'Not Found' or ('package_state' not in cve_data and \
+                                                  'affected_release' not in cve_data):
             print(cve + ' does not affect Red Hat software.')
             continue
 
-        affected_releases, package_states = filter_rhel_data(data, want_rhels, fix_states, affected_keys, package_keys)
+        affected_releases, package_states = filter_rhel_data(cve_data, want_rhels, fix_states, affected_keys, package_keys)
 
-        #print(data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
-        print(data.get('name', cve))
-        print(data.get('threat_severity', 'NO threat_severity FOUND'), 
-              data.get('public_date', 'NO public_date FOUND')[0:10])
+        #print(cve_data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
+        print(cve_data.get('name', cve))
+        print(cve_data.get('threat_severity', 'NO threat_severity FOUND'), 
+              cve_data.get('public_date', 'NO public_date FOUND')[0:10])
         if affected_releases:
             print_rhel_table(affected_releases)
         else:
