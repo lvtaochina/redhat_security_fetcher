@@ -6,46 +6,8 @@ from dataclasses import dataclass
 import requests
 # from datetime import datetime, timedelta
 from pathlib import Path
-
-API_HOST = 'https://access.redhat.com/hydra/rest/securitydata'
-
-PROXIES = {}
-
-#uncomment lines below to specify proxy server
-# HTTPS_PROXY = "http://yourproxy.example.com:8000"
-# PROXIES = { "https" : HTTPS_PROXY }
-
-want_rhels = {
-                "Red Hat Enterprise Linux 7", 
-                "Red Hat Enterprise Linux 7.3", 
-                "Red Hat Enterprise Linux 7.5",
-                "Red Hat Enterprise Linux 8", 
-                "Red Hat Enterprise Linux 8.4", 
-                "Red Hat Enterprise Linux 8.8", 
-                "Red Hat Enterprise Linux 8.10",
-             #   "Red Hat Enterprise Linux 9", 
-             #   "Red Hat Enterprise Linux 9.6"
-                }
-
-fix_states = {
-                "Affected",
-                "Fix deferred",
-#                "Not affected",
-#                "Will not fix",
-#                "Out of support scope",
-                }      
-
-affected_keys = [
-                "product_name", 
-                "package", 
-                "advisory",
-                ]
-
-package_keys = [
-                "product_name", 
-                "package_name", 
-                "fix_state",
-                ]
+from config import API_HOST, PROXIES, want_rhels, fix_states, affected_keys, package_keys, \
+                   REQ_TIME_OUT, CVE_INPUT_PATH
 
 class DataError(Enum):
     NO_DATA = auto()
@@ -59,6 +21,13 @@ class DataResult:
     error: DataError | None
     status_code: int | None
 
+@dataclass 
+class RhelCveData:
+    cve_name: str
+    threat_severity: str
+    public_date: str
+    affected_releases: dict[str, list[list[str]]]
+    package_states: dict[str, list[list[str]]]
 
 """
 get_data(endpoint: str) -> DataResult:
@@ -83,7 +52,7 @@ def get_data(endpoint: str) -> DataResult:
     full_query = API_HOST + endpoint
 
     try:
-        r = requests.get(full_query, proxies=PROXIES, timeout=20)
+        r = requests.get(full_query, proxies=PROXIES, timeout=REQ_TIME_OUT)
     except requests.RequestException:
         return DataResult(data=None, error=DataError.REQUEST_EXCEPTION, status_code=None)   
 
@@ -124,40 +93,42 @@ def add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
 """
 filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], 
                     affected_want_keys: list[str], package_want_keys: list[str]) \
-                    -> tuple[dict[str, list[list[str]]], 
-                             dict[str, list[list[str]]]
-                             ]
+                    -> RhelCveData:
 函数职责：
-    处理一个 CVE API 响应数据，
-    从中筛选指定 RHEL 版本的受影响数据。
-    - 目前无需进一步抽象；两个数据来源业务含义不同，分别处理更清晰。
+    处理一个 CVE API 响应数据
 
 输入：
     一个 CVE 对应的 JSON 数据
     目标 RHEL 版本集合
     允许的修复状态集合
-    期望的 affected_release 键列表
-    期望的 package_state 键列表
+    期望的键列表 -  affected_release 部分
+    期望的键列表 -  package_state 部分
 
 处理：
-    1. 筛选目标 RHEL 版本
-    2. 处理有 FIX 的 affected_release 数据
-    3. 处理无 FIX 的 package_state 数据
-
+    1. 处理一个 CVE API 响应数据，
+    2. 从中提取 CVE 基本信息，
+    3. 筛选指定 RHEL 版本的相关数据
+        - 处理有 FIX 的 affected_release 数据
+        - 处理无 FIX 的 package_state 数据
 返回：
-    包含两个字典的元组
-        ├── 有 FIX 的数据
-        └── 无 FIX 的数据
+    RhelCveData 对象，包含：
+    - cve_name string
+    - threat_severity string
+    - public_date string
+    - affected_releases dict[str, list[list[str]]]
+    - package_states dict[str, list[list[str]]]
 """
-def filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str],
+def filter_cve_data(data: dict, want_rhels: set[str], fix_states: set[str],
                       affected_keys: list[str], package_keys: list[str]) \
-                      -> tuple[dict[str, list[list[str]]], 
-                               dict[str, list[list[str]]]
-                               ]:
+                      -> RhelCveData:
     # Implementation for filtering RHEL data
+    cve_name = data.get('name', 'Unknown CVE')
+    threat_severity = data.get('threat_severity', 'Unknown Severity')
+    public_date = data.get('public_date', 'Unknown Date')[0:10]
+    
     affected_releases = {}
     package_states = {}
-
+    
     for rel in data.get("affected_release", []):
         prd_name = rel.get("product_name")
         if prd_name in want_rhels:
@@ -172,7 +143,7 @@ def filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str],
             #用无修复的数据构建字典；是否已有该版本数据,没有的话添加新的键值对,有的话直接追加数据
             add_to_dict(package_states, prd_name, rel_to_add)
 
-    return affected_releases, package_states
+    return RhelCveData(cve_name, threat_severity, public_date, affected_releases, package_states)
 
 
 """
@@ -192,19 +163,18 @@ def print_rhel_table(d:dict[str, list[list[str]]]) -> None:
 
 """
 read_cves()
-    函数职责: 将包含“CVE ID”的文件读入list
-    参数: N/A
-    数据来源: input/cves.txt
+    函数职责: 将CVE IDs读入list
+    参数: 指定的CVE文件路径的配置参数
     处理：逐行读取，去除空白，忽略空行
     返回: list[str]
-    异常:input/cves.txt不存在 -> 异常自然传播
-         cves.txt为空 -> 由main()处理
+    异常:input/cves.txt不存在 -> 异常自然传播到主函数
+         cves.txt为空 -> 无异常, 直接由main()处理
          文件打不开→相应的 OSError ->异常自然传播 
          文件编码有问题→UnicodeDecodeError ->异常自然传播
          cves.txt内容或格式非法 -> todo 
 """
-def read_cves() -> list[str]:
-    cves_path = Path(__file__).resolve().parent / 'input' / 'cves.txt'
+def read_cves(cves_path: Path) -> list[str]:
+    # cves_path = Path(__file__).resolve().parent / 'input' / 'cves.txt'
     with cves_path.open('r', encoding='utf-8') as f:
         cves = [line.strip() for line in f if line.strip()]
     return cves
@@ -215,7 +185,7 @@ main()
     函数职责: 主函数, 用于执行CVE数据获取和过滤逻辑
              * 未设计重试机制, 仅返回错误信息
     参数: N/A
-    数据来源: input/cves.txt
+    数据来源: CVE_INPUT_PATH配置参数
     处理: 
         读取CVE数据文件
         处理相关异常
@@ -231,12 +201,12 @@ main()
 """
 def main() -> None:
     try:
-        cves = read_cves()
+        cves = read_cves(CVE_INPUT_PATH)
     except FileNotFoundError:
-        print(f"Error: input/cves.txt not found", file=sys.stderr)
+        print(f"Error: {CVE_INPUT_PATH} not found", file=sys.stderr)
         return
     if not cves:
-        print("Error: input/cves.txt is empty.", file=sys.stderr)
+        print(f"Error: {CVE_INPUT_PATH} is empty.", file=sys.stderr)
         return
 
     for cve in cves:
@@ -255,21 +225,19 @@ def main() -> None:
             print(cve + ' does not affect Red Hat software.')
             continue
 
-        affected_releases, package_states = filter_rhel_data(cve_data, want_rhels, fix_states, affected_keys, package_keys)
+        rhel_cve_data = filter_cve_data(cve_data, want_rhels, fix_states, affected_keys, package_keys)
 
-        #print(cve_data.get('name', cve), "\n红帽有修复: ", affected_releases, "\n红帽无修复: ", package_states)
-        print(cve_data.get('name', cve))
-        print(cve_data.get('threat_severity', 'NO threat_severity FOUND'), 
-              cve_data.get('public_date', 'NO public_date FOUND')[0:10])
-        if affected_releases:
-            print_rhel_table(affected_releases)
+        #print(rhel_cve_data.cve_name, "\n红帽有修复: ", rhel_cve_data.affected_releases, "\n红帽无修复: ", rhel_cve_data.package_states)
+        print(rhel_cve_data.cve_name)
+        print(rhel_cve_data.threat_severity, rhel_cve_data.public_date)
+        if rhel_cve_data.affected_releases:
+            print_rhel_table(rhel_cve_data.affected_releases)
         else:
             print("有修复部分: 红帽相关版本产品不受影响")
-        #if package_states:
-        #   print_rhel_table(package_states)
+        #if rhel_cve_data.package_states:
+        #   print_rhel_table(rhel_cve_data.package_states)
         #else:
          #  print("无修复部分: 红帽相关版本产品不受影响")
-
 
 if __name__ == "__main__":
     main()
