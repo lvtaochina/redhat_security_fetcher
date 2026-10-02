@@ -1,0 +1,1570 @@
+2026-10-02 17:48:47,774 - INFO - Processing 261 CVEs from /home/ubuntu/redhat_security_fetcher/input/cves.d260721.txt
+2026-10-02 17:48:47,776 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:48,303 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-12224.json HTTP/1.1" 200 2666
+2026-10-02 17:48:48,305 - INFO - CVE-2024-12224 Moderate 2025-05-30
+2026-10-02 17:48:48,306 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:48,763 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-32650.json HTTP/1.1" 404 29
+2026-10-02 17:48:48,764 - ERROR - CVE-2024-32650: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:48:48,765 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:49,005 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-12243.json HTTP/1.1" 200 1193
+2026-10-02 17:48:49,007 - INFO - CVE-2024-12243 Moderate 2025-02-10
+2026-10-02 17:48:49,009 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:49,457 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-0553.json HTTP/1.1" 200 2164
+2026-10-02 17:48:49,458 - INFO - CVE-2024-0553 Moderate 2024-01-16
+2026-10-02 17:48:49,459 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:49,699 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-58266.json HTTP/1.1" 200 2457
+2026-10-02 17:48:49,700 - INFO - CVE-2024-58266 Low 2025-07-27
+2026-10-02 17:48:49,702 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:50,177 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-14179.json HTTP/1.1" 200 1438
+2026-10-02 17:48:50,179 - INFO - CVE-2025-14179: does not affect Red Hat software.
+2026-10-02 17:48:50,180 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:50,780 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-15661.json HTTP/1.1" 200 1333
+2026-10-02 17:48:50,781 - INFO - CVE-2025-15661: does not affect Red Hat software.
+2026-10-02 17:48:50,782 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:50,998 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-30204.json HTTP/1.1" 200 16258
+2026-10-02 17:48:51,003 - INFO - CVE-2025-30204 Important 2025-03-21
+2026-10-02 17:48:51,003 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:51,253 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-47913.json HTTP/1.1" 200 5282
+2026-10-02 17:48:51,255 - INFO - CVE-2025-47913 Important 2025-11-13
+2026-10-02 17:48:51,257 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:51,706 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-3416.json HTTP/1.1" 200 1312
+2026-10-02 17:48:51,707 - INFO - CVE-2025-3416 Low 2025-04-04
+2026-10-02 17:48:51,709 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:52,193 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-58160.json HTTP/1.1" 200 1932
+2026-10-02 17:48:52,195 - INFO - CVE-2025-58160 Low 2025-08-29
+2026-10-02 17:48:52,196 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:52,670 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2023-26964.json HTTP/1.1" 404 29
+2026-10-02 17:48:52,671 - ERROR - CVE-2023-26964: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:48:52,672 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:53,137 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2024-43806.json HTTP/1.1" 404 29
+2026-10-02 17:48:53,138 - ERROR - CVE-2024-43806: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:48:53,140 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:53,357 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-61729.json HTTP/1.1" 200 28438
+2026-10-02 17:48:53,365 - INFO - CVE-2025-61729 Important 2025-12-02
+2026-10-02 17:48:53,366 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:53,814 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-68461.json HTTP/1.1" 200 927
+2026-10-02 17:48:53,816 - INFO - CVE-2025-68461: does not affect Red Hat software.
+2026-10-02 17:48:53,817 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:54,273 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-67030.json HTTP/1.1" 200 3654
+2026-10-02 17:48:54,274 - INFO - CVE-2025-67030 Important 2026-03-25
+2026-10-02 17:48:54,275 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:54,504 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-61726.json HTTP/1.1" 200 41667
+2026-10-02 17:48:54,512 - INFO - CVE-2025-61726 Important 2026-01-28
+2026-10-02 17:48:54,514 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:54,962 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-71066.json HTTP/1.1" 200 2388
+2026-10-02 17:48:54,964 - INFO - CVE-2025-71066 Moderate 2026-01-13
+2026-10-02 17:48:54,965 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:55,417 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-14831.json HTTP/1.1" 200 2067
+2026-10-02 17:48:55,419 - INFO - CVE-2025-14831 Moderate 2026-02-09
+2026-10-02 17:48:55,419 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:55,891 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-69725.json HTTP/1.1" 200 2286
+2026-10-02 17:48:55,892 - INFO - CVE-2025-69725 Moderate 2026-02-19
+2026-10-02 17:48:55,893 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:56,106 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-10536.json HTTP/1.1" 200 1627
+2026-10-02 17:48:56,107 - INFO - CVE-2026-10536: does not affect Red Hat software.
+2026-10-02 17:48:56,108 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:56,350 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-71089.json HTTP/1.1" 200 2411
+2026-10-02 17:48:56,351 - INFO - CVE-2025-71089 Moderate 2026-01-13
+2026-10-02 17:48:56,352 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:56,815 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-11525.json HTTP/1.1" 200 2745
+2026-10-02 17:48:56,817 - INFO - CVE-2026-11525 Low 2026-06-17
+2026-10-02 17:48:56,818 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:57,283 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-10722.json HTTP/1.1" 200 2146
+2026-10-02 17:48:57,285 - INFO - CVE-2026-10722 Moderate 2026-06-03
+2026-10-02 17:48:57,286 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:57,546 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2025-9820.json HTTP/1.1" 200 1997
+2026-10-02 17:48:57,548 - INFO - CVE-2025-9820 Low 2025-11-18
+2026-10-02 17:48:57,549 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:58,024 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-11526.json HTTP/1.1" 200 1632
+2026-10-02 17:48:58,026 - INFO - CVE-2026-11526: does not affect Red Hat software.
+2026-10-02 17:48:58,027 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:58,498 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12064.json HTTP/1.1" 200 1715
+2026-10-02 17:48:58,499 - INFO - CVE-2026-12064: does not affect Red Hat software.
+2026-10-02 17:48:58,500 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:58,956 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12151.json HTTP/1.1" 200 3716
+2026-10-02 17:48:58,957 - INFO - CVE-2026-12151 Important 2026-06-17
+2026-10-02 17:48:58,958 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:59,412 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12290.json HTTP/1.1" 200 1362
+2026-10-02 17:48:59,414 - INFO - CVE-2026-12290 Important 2026-06-16
+2026-10-02 17:48:59,415 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:48:59,865 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12291.json HTTP/1.1" 200 1377
+2026-10-02 17:48:59,867 - INFO - CVE-2026-12291 Important 2026-06-16
+2026-10-02 17:48:59,868 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:00,324 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12292.json HTTP/1.1" 200 1371
+2026-10-02 17:49:00,326 - INFO - CVE-2026-12292 Important 2026-06-16
+2026-10-02 17:49:00,327 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:00,775 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12294.json HTTP/1.1" 200 1374
+2026-10-02 17:49:00,776 - INFO - CVE-2026-12294 Important 2026-06-16
+2026-10-02 17:49:00,778 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:01,078 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12289.json HTTP/1.1" 200 1383
+2026-10-02 17:49:01,079 - INFO - CVE-2026-12289 Important 2026-06-16
+2026-10-02 17:49:01,081 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:01,532 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12296.json HTTP/1.1" 200 1367
+2026-10-02 17:49:01,533 - INFO - CVE-2026-12296 Important 2026-06-16
+2026-10-02 17:49:01,534 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:01,977 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12295.json HTTP/1.1" 200 1375
+2026-10-02 17:49:01,978 - INFO - CVE-2026-12295 Important 2026-06-16
+2026-10-02 17:49:01,979 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:02,498 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12298.json HTTP/1.1" 200 1355
+2026-10-02 17:49:02,499 - INFO - CVE-2026-12298 Important 2026-06-16
+2026-10-02 17:49:02,501 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:02,966 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12299.json HTTP/1.1" 200 1380
+2026-10-02 17:49:02,968 - INFO - CVE-2026-12299 Important 2026-06-16
+2026-10-02 17:49:02,969 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:03,434 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12297.json HTTP/1.1" 200 1392
+2026-10-02 17:49:03,436 - INFO - CVE-2026-12297 Important 2026-06-16
+2026-10-02 17:49:03,437 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:03,915 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-10842.json HTTP/1.1" 404 29
+2026-10-02 17:49:03,917 - ERROR - CVE-2026-10842: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:03,918 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:04,417 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-10649.json HTTP/1.1" 200 1654
+2026-10-02 17:49:04,419 - INFO - CVE-2026-10649 Important 2026-06-16
+2026-10-02 17:49:04,420 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:04,860 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12305.json HTTP/1.1" 200 1357
+2026-10-02 17:49:04,862 - INFO - CVE-2026-12305 Moderate 2026-06-16
+2026-10-02 17:49:04,862 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:05,374 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12304.json HTTP/1.1" 200 1382
+2026-10-02 17:49:05,376 - INFO - CVE-2026-12304 Moderate 2026-06-16
+2026-10-02 17:49:05,377 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:05,897 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12302.json HTTP/1.1" 200 1360
+2026-10-02 17:49:05,898 - INFO - CVE-2026-12302 Moderate 2026-06-16
+2026-10-02 17:49:05,899 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:06,368 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12307.json HTTP/1.1" 200 1357
+2026-10-02 17:49:06,370 - INFO - CVE-2026-12307 Moderate 2026-06-16
+2026-10-02 17:49:06,371 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:06,872 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12309.json HTTP/1.1" 200 1357
+2026-10-02 17:49:06,873 - INFO - CVE-2026-12309 Moderate 2026-06-16
+2026-10-02 17:49:06,874 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:07,341 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12308.json HTTP/1.1" 200 1347
+2026-10-02 17:49:07,343 - INFO - CVE-2026-12308 Moderate 2026-06-16
+2026-10-02 17:49:07,344 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:07,811 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12306.json HTTP/1.1" 200 1357
+2026-10-02 17:49:07,813 - INFO - CVE-2026-12306 Moderate 2026-06-16
+2026-10-02 17:49:07,814 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:08,266 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12312.json HTTP/1.1" 200 1357
+2026-10-02 17:49:08,267 - INFO - CVE-2026-12312 Moderate 2026-06-16
+2026-10-02 17:49:08,268 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:08,734 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12311.json HTTP/1.1" 200 1388
+2026-10-02 17:49:08,735 - INFO - CVE-2026-12311 Moderate 2026-06-16
+2026-10-02 17:49:08,736 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:09,180 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12315.json HTTP/1.1" 200 1364
+2026-10-02 17:49:09,182 - INFO - CVE-2026-12315 Moderate 2026-06-16
+2026-10-02 17:49:09,183 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:09,683 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12314.json HTTP/1.1" 200 1356
+2026-10-02 17:49:09,685 - INFO - CVE-2026-12314 Moderate 2026-06-16
+2026-10-02 17:49:09,685 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:10,162 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12318.json HTTP/1.1" 200 777
+2026-10-02 17:49:10,163 - INFO - CVE-2026-12318: does not affect Red Hat software.
+2026-10-02 17:49:10,164 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:10,620 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12313.json HTTP/1.1" 200 1387
+2026-10-02 17:49:10,621 - INFO - CVE-2026-12313 Moderate 2026-06-16
+2026-10-02 17:49:10,622 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:11,101 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12327.json HTTP/1.1" 200 1476
+2026-10-02 17:49:11,102 - INFO - CVE-2026-12327 Moderate 2026-06-16
+2026-10-02 17:49:11,103 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:11,596 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12324.json HTTP/1.1" 200 1383
+2026-10-02 17:49:11,597 - INFO - CVE-2026-12324 Low 2026-06-16
+2026-10-02 17:49:11,598 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:12,042 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12310.json HTTP/1.1" 200 1357
+2026-10-02 17:49:12,044 - INFO - CVE-2026-12310 Moderate 2026-06-16
+2026-10-02 17:49:12,045 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:12,490 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12330.json HTTP/1.1" 200 1375
+2026-10-02 17:49:12,491 - INFO - CVE-2026-12330 Moderate 2026-06-16
+2026-10-02 17:49:12,492 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:13,007 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12328.json HTTP/1.1" 200 1491
+2026-10-02 17:49:13,009 - INFO - CVE-2026-12328 Important 2026-06-16
+2026-10-02 17:49:13,010 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:13,508 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12329.json HTTP/1.1" 200 1336
+2026-10-02 17:49:13,509 - INFO - CVE-2026-12329 Important 2026-06-16
+2026-10-02 17:49:13,510 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:13,946 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12325.json HTTP/1.1" 200 1383
+2026-10-02 17:49:13,948 - INFO - CVE-2026-12325 Low 2026-06-16
+2026-10-02 17:49:13,949 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:14,173 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-15308.json HTTP/1.1" 200 2737
+2026-10-02 17:49:14,175 - INFO - CVE-2026-15308 Important 2026-07-09
+2026-10-02 17:49:14,176 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:14,623 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20213.json HTTP/1.1" 200 1149
+2026-10-02 17:49:14,624 - INFO - CVE-2026-20213: does not affect Red Hat software.
+2026-10-02 17:49:14,625 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:15,817 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12725.json HTTP/1.1" 200 1288
+2026-10-02 17:49:15,818 - INFO - CVE-2026-12725 Moderate 2026-04-21
+2026-10-02 17:49:15,820 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:16,302 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20216.json HTTP/1.1" 200 1072
+2026-10-02 17:49:16,304 - INFO - CVE-2026-20216: does not affect Red Hat software.
+2026-10-02 17:49:16,305 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:16,789 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20215.json HTTP/1.1" 200 1122
+2026-10-02 17:49:16,790 - INFO - CVE-2026-20215: does not affect Red Hat software.
+2026-10-02 17:49:16,791 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:17,300 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20214.json HTTP/1.1" 200 1353
+2026-10-02 17:49:17,302 - INFO - CVE-2026-20214: does not affect Red Hat software.
+2026-10-02 17:49:17,303 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:17,760 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20243.json HTTP/1.1" 200 1162
+2026-10-02 17:49:17,761 - INFO - CVE-2026-20243: does not affect Red Hat software.
+2026-10-02 17:49:17,769 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:18,314 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12969.json HTTP/1.1" 200 1272
+2026-10-02 17:49:18,316 - INFO - CVE-2026-12969: does not affect Red Hat software.
+2026-10-02 17:49:18,317 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:18,767 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20297.json HTTP/1.1" 404 29
+2026-10-02 17:49:18,769 - ERROR - CVE-2026-20297: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:18,770 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:19,340 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20217.json HTTP/1.1" 200 1073
+2026-10-02 17:49:19,342 - INFO - CVE-2026-20217: does not affect Red Hat software.
+2026-10-02 17:49:19,342 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:19,805 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-20244.json HTTP/1.1" 200 1160
+2026-10-02 17:49:19,806 - INFO - CVE-2026-20244: does not affect Red Hat software.
+2026-10-02 17:49:19,807 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:20,380 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-24051.json HTTP/1.1" 200 1578
+2026-10-02 17:49:20,381 - INFO - CVE-2026-24051: does not affect Red Hat software.
+2026-10-02 17:49:20,383 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:20,883 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-21892.json HTTP/1.1" 404 29
+2026-10-02 17:49:20,884 - ERROR - CVE-2026-21892: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:20,885 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:21,149 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-25680.json HTTP/1.1" 200 7444
+2026-10-02 17:49:21,151 - INFO - CVE-2026-25680: does not affect Red Hat software.
+2026-10-02 17:49:21,152 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:21,600 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-23393.json HTTP/1.1" 200 1266
+2026-10-02 17:49:21,602 - INFO - CVE-2026-23393: does not affect Red Hat software.
+2026-10-02 17:49:21,603 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:21,815 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-25681.json HTTP/1.1" 200 11786
+2026-10-02 17:49:21,818 - INFO - CVE-2026-25681 Important 2026-05-22
+2026-10-02 17:49:21,819 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:22,025 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-25727.json HTTP/1.1" 200 2542
+2026-10-02 17:49:22,027 - INFO - CVE-2026-25727 Moderate 2026-02-06
+2026-10-02 17:49:22,028 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:22,221 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-25679.json HTTP/1.1" 200 32212
+2026-10-02 17:49:22,227 - INFO - CVE-2026-25679 Important 2026-03-06
+2026-10-02 17:49:22,228 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:22,473 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-14544.json HTTP/1.1" 200 1136
+2026-10-02 17:49:22,475 - INFO - CVE-2026-14544 Important 2026-07-03
+2026-10-02 17:49:22,476 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:22,934 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-12912.json HTTP/1.1" 200 2089
+2026-10-02 17:49:22,936 - INFO - CVE-2026-12912 Important 2026-04-16
+2026-10-02 17:49:22,937 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:23,145 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27143.json HTTP/1.1" 200 20023
+2026-10-02 17:49:23,150 - INFO - CVE-2026-27143 Moderate 2026-04-08
+2026-10-02 17:49:23,151 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:23,361 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27140.json HTTP/1.1" 200 4207
+2026-10-02 17:49:23,363 - INFO - CVE-2026-27140 Important 2026-04-08
+2026-10-02 17:49:23,364 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:23,600 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27144.json HTTP/1.1" 200 19992
+2026-10-02 17:49:23,604 - INFO - CVE-2026-27144 Moderate 2026-04-08
+2026-10-02 17:49:23,605 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:23,790 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27136.json HTTP/1.1" 200 11451
+2026-10-02 17:49:23,794 - INFO - CVE-2026-27136 Important 2026-05-22
+2026-10-02 17:49:23,794 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:23,989 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-28390.json HTTP/1.1" 200 5203
+2026-10-02 17:49:23,993 - INFO - CVE-2026-28390 Moderate 2026-04-07
+2026-10-02 17:49:23,994 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:26,733 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-29146.json HTTP/1.1" 200 2058
+2026-10-02 17:49:26,735 - INFO - CVE-2026-29146 Important 2026-04-09
+2026-10-02 17:49:26,736 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:27,216 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-29181.json HTTP/1.1" 200 1743
+2026-10-02 17:49:27,217 - INFO - CVE-2026-29181: does not affect Red Hat software.
+2026-10-02 17:49:27,218 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:27,875 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27137.json HTTP/1.1" 200 6064
+2026-10-02 17:49:27,877 - INFO - CVE-2026-27137 Important 2026-03-06
+2026-10-02 17:49:27,878 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:28,122 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-27145.json HTTP/1.1" 200 9497
+2026-10-02 17:49:28,124 - INFO - CVE-2026-27145 Important 2026-06-02
+2026-10-02 17:49:28,125 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:28,615 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31505.json HTTP/1.1" 200 2175
+2026-10-02 17:49:28,617 - INFO - CVE-2026-31505 Moderate 2026-04-22
+2026-10-02 17:49:28,618 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:28,813 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31402.json HTTP/1.1" 200 2518
+2026-10-02 17:49:28,814 - INFO - CVE-2026-31402 Important 2026-04-03
+2026-10-02 17:49:28,815 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:29,279 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31533.json HTTP/1.1" 200 1639
+2026-10-02 17:49:29,281 - INFO - CVE-2026-31533 Moderate 2026-04-23
+2026-10-02 17:49:29,282 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:29,834 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31570.json HTTP/1.1" 200 1716
+2026-10-02 17:49:29,836 - INFO - CVE-2026-31570 Moderate 2026-04-24
+2026-10-02 17:49:29,836 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:30,370 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31586.json HTTP/1.1" 200 1984
+2026-10-02 17:49:30,371 - INFO - CVE-2026-31586 Moderate 2026-04-24
+2026-10-02 17:49:30,373 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:30,594 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31607.json HTTP/1.1" 200 2305
+2026-10-02 17:49:30,595 - INFO - CVE-2026-31607: does not affect Red Hat software.
+2026-10-02 17:49:30,596 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:31,114 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31637.json HTTP/1.1" 200 1109
+2026-10-02 17:49:31,116 - INFO - CVE-2026-31637 Moderate 2026-04-24
+2026-10-02 17:49:31,117 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:31,370 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31669.json HTTP/1.1" 200 2498
+2026-10-02 17:49:31,372 - INFO - CVE-2026-31669 Moderate 2026-04-24
+2026-10-02 17:49:31,373 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:31,833 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31659.json HTTP/1.1" 200 1052
+2026-10-02 17:49:31,835 - INFO - CVE-2026-31659: does not affect Red Hat software.
+2026-10-02 17:49:31,836 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:32,051 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31685.json HTTP/1.1" 200 1700
+2026-10-02 17:49:32,053 - INFO - CVE-2026-31685 Moderate 2026-04-25
+2026-10-02 17:49:32,054 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:32,512 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31411.json HTTP/1.1" 200 2139
+2026-10-02 17:49:32,514 - INFO - CVE-2026-31411 Moderate 2026-04-08
+2026-10-02 17:49:32,515 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:33,003 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31718.json HTTP/1.1" 200 1232
+2026-10-02 17:49:33,005 - INFO - CVE-2026-31718: does not affect Red Hat software.
+2026-10-02 17:49:33,006 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:33,289 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31790.json HTTP/1.1" 200 2828
+2026-10-02 17:49:33,291 - INFO - CVE-2026-31790: does not affect Red Hat software.
+2026-10-02 17:49:33,292 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:33,764 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-31758.json HTTP/1.1" 200 1126
+2026-10-02 17:49:33,766 - INFO - CVE-2026-31758 Moderate 2026-05-01
+2026-10-02 17:49:33,767 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:33,995 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32281.json HTTP/1.1" 200 9343
+2026-10-02 17:49:33,997 - INFO - CVE-2026-32281 Moderate 2026-04-08
+2026-10-02 17:49:33,998 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:34,255 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32282.json HTTP/1.1" 200 10223
+2026-10-02 17:49:34,258 - INFO - CVE-2026-32282 Moderate 2026-04-08
+2026-10-02 17:49:34,259 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:34,789 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32280.json HTTP/1.1" 200 11977
+2026-10-02 17:49:34,792 - INFO - CVE-2026-32280 Important 2026-04-08
+2026-10-02 17:49:34,793 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:35,258 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32285.json HTTP/1.1" 200 1929
+2026-10-02 17:49:35,260 - INFO - CVE-2026-32285: does not affect Red Hat software.
+2026-10-02 17:49:35,261 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:35,747 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32287.json HTTP/1.1" 200 1406
+2026-10-02 17:49:35,748 - INFO - CVE-2026-32287: does not affect Red Hat software.
+2026-10-02 17:49:35,749 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:35,974 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-32283.json HTTP/1.1" 200 10369
+2026-10-02 17:49:35,977 - INFO - CVE-2026-32283 Important 2026-04-08
+2026-10-02 17:49:35,977 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:36,492 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33554.json HTTP/1.1" 200 2086
+2026-10-02 17:49:36,494 - INFO - CVE-2026-33554 Moderate 2026-03-24
+2026-10-02 17:49:36,495 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:36,727 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33532.json HTTP/1.1" 200 3007
+2026-10-02 17:49:36,729 - INFO - CVE-2026-33532 Moderate 2026-03-26
+2026-10-02 17:49:36,730 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:37,195 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33815.json HTTP/1.1" 200 3009
+2026-10-02 17:49:37,197 - INFO - CVE-2026-33815: does not affect Red Hat software.
+2026-10-02 17:49:37,198 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:37,431 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33811.json HTTP/1.1" 200 10182
+2026-10-02 17:49:37,433 - INFO - CVE-2026-33811 Important 2026-05-07
+2026-10-02 17:49:37,434 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:37,640 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33845.json HTTP/1.1" 200 2581
+2026-10-02 17:49:37,641 - INFO - CVE-2026-33845 Important 2026-04-30
+2026-10-02 17:49:37,642 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:38,128 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33810.json HTTP/1.1" 200 7767
+2026-10-02 17:49:38,131 - INFO - CVE-2026-33810 Important 2026-04-08
+2026-10-02 17:49:38,132 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:38,382 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33814.json HTTP/1.1" 200 19247
+2026-10-02 17:49:38,386 - INFO - CVE-2026-33814 Important 2026-05-07
+2026-10-02 17:49:38,387 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:38,873 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-34486.json HTTP/1.1" 200 1678
+2026-10-02 17:49:38,875 - INFO - CVE-2026-34486 Important 2026-04-09
+2026-10-02 17:49:38,876 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:39,097 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-34986.json HTTP/1.1" 200 12628
+2026-10-02 17:49:39,100 - INFO - CVE-2026-34986 Important 2026-04-06
+2026-10-02 17:49:39,101 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:39,603 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-33846.json HTTP/1.1" 200 3054
+2026-10-02 17:49:39,605 - INFO - CVE-2026-33846 Important 2026-05-04
+2026-10-02 17:49:39,606 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:40,078 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-36849.json HTTP/1.1" 404 29
+2026-10-02 17:49:40,080 - ERROR - CVE-2026-36849: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:40,081 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:40,332 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39827.json HTTP/1.1" 200 4503
+2026-10-02 17:49:40,334 - INFO - CVE-2026-39827: does not affect Red Hat software.
+2026-10-02 17:49:40,335 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:40,606 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39822.json HTTP/1.1" 200 5911
+2026-10-02 17:49:40,608 - INFO - CVE-2026-39822 Important 2026-07-08
+2026-10-02 17:49:40,610 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:41,128 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-3833.json HTTP/1.1" 200 2649
+2026-10-02 17:49:41,129 - INFO - CVE-2026-3833 Moderate 2026-04-30
+2026-10-02 17:49:41,130 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:41,376 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39821.json HTTP/1.1" 200 11768
+2026-10-02 17:49:41,379 - INFO - CVE-2026-39821 Important 2026-05-22
+2026-10-02 17:49:41,380 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:41,587 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39831.json HTTP/1.1" 200 5933
+2026-10-02 17:49:41,590 - INFO - CVE-2026-39831 Important 2026-05-22
+2026-10-02 17:49:41,590 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:41,962 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39829.json HTTP/1.1" 200 7386
+2026-10-02 17:49:41,964 - INFO - CVE-2026-39829 Important 2026-05-22
+2026-10-02 17:49:41,965 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:42,446 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39832.json HTTP/1.1" 200 4959
+2026-10-02 17:49:42,448 - INFO - CVE-2026-39832 Important 2026-05-22
+2026-10-02 17:49:42,449 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:42,670 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39830.json HTTP/1.1" 200 7113
+2026-10-02 17:49:42,672 - INFO - CVE-2026-39830 Important 2026-05-22
+2026-10-02 17:49:42,674 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:42,899 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39834.json HTTP/1.1" 200 4662
+2026-10-02 17:49:42,901 - INFO - CVE-2026-39834: does not affect Red Hat software.
+2026-10-02 17:49:42,902 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:43,450 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39828.json HTTP/1.1" 200 6555
+2026-10-02 17:49:43,452 - INFO - CVE-2026-39828: does not affect Red Hat software.
+2026-10-02 17:49:43,453 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:43,753 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39833.json HTTP/1.1" 200 11902
+2026-10-02 17:49:43,758 - INFO - CVE-2026-39833 Moderate 2026-05-22
+2026-10-02 17:49:43,759 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:44,000 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39836.json HTTP/1.1" 200 5378
+2026-10-02 17:49:44,002 - INFO - CVE-2026-39836 Moderate 2026-05-07
+2026-10-02 17:49:44,003 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:44,463 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39882.json HTTP/1.1" 200 1211
+2026-10-02 17:49:44,465 - INFO - CVE-2026-39882: does not affect Red Hat software.
+2026-10-02 17:49:44,466 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:44,916 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39883.json HTTP/1.1" 200 1816
+2026-10-02 17:49:44,918 - INFO - CVE-2026-39883: does not affect Red Hat software.
+2026-10-02 17:49:44,919 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:45,461 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-40622.json HTTP/1.1" 200 1608
+2026-10-02 17:49:45,462 - INFO - CVE-2026-40622 Moderate 2026-05-20
+2026-10-02 17:49:45,463 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:45,956 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41676.json HTTP/1.1" 404 29
+2026-10-02 17:49:45,957 - ERROR - CVE-2026-41676: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:45,958 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:46,504 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41401.json HTTP/1.1" 200 1489
+2026-10-02 17:49:46,505 - INFO - CVE-2026-41401 Moderate 2026-05-26
+2026-10-02 17:49:46,506 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:46,994 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41677.json HTTP/1.1" 404 29
+2026-10-02 17:49:46,996 - ERROR - CVE-2026-41677: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:46,997 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:47,489 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41292.json HTTP/1.1" 200 1698
+2026-10-02 17:49:47,490 - INFO - CVE-2026-41292 Important 2026-05-20
+2026-10-02 17:49:47,491 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:47,747 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-39835.json HTTP/1.1" 200 6627
+2026-10-02 17:49:47,749 - INFO - CVE-2026-39835 Important 2026-05-22
+2026-10-02 17:49:47,750 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:48,206 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41681.json HTTP/1.1" 404 29
+2026-10-02 17:49:48,207 - ERROR - CVE-2026-41681: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:48,208 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:48,724 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41889.json HTTP/1.1" 200 3458
+2026-10-02 17:49:48,726 - INFO - CVE-2026-41889 Moderate 2026-05-08
+2026-10-02 17:49:48,726 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:49,218 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41678.json HTTP/1.1" 404 29
+2026-10-02 17:49:49,219 - ERROR - CVE-2026-41678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:49,220 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:49,683 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41898.json HTTP/1.1" 404 29
+2026-10-02 17:49:49,684 - ERROR - CVE-2026-41898: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:49:49,685 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:50,179 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41991.json HTTP/1.1" 200 1782
+2026-10-02 17:49:50,181 - INFO - CVE-2026-41991 Moderate 2026-06-29
+2026-10-02 17:49:50,182 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:50,458 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-41992.json HTTP/1.1" 200 1498
+2026-10-02 17:49:50,460 - INFO - CVE-2026-41992 Low 2026-06-29
+2026-10-02 17:49:50,461 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:50,915 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-4176.json HTTP/1.1" 200 1378
+2026-10-02 17:49:50,916 - INFO - CVE-2026-4176 Moderate 2026-03-29
+2026-10-02 17:49:50,917 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:51,374 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42327.json HTTP/1.1" 200 1111
+2026-10-02 17:49:51,375 - INFO - CVE-2026-42327: does not affect Red Hat software.
+2026-10-02 17:49:51,376 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:52,047 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42055.json HTTP/1.1" 200 2034
+2026-10-02 17:49:52,049 - INFO - CVE-2026-42055 Important 2026-06-17
+2026-10-02 17:49:52,050 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:52,617 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42338.json HTTP/1.1" 200 3659
+2026-10-02 17:49:52,619 - INFO - CVE-2026-42338 Important 2026-05-12
+2026-10-02 17:49:52,620 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:53,170 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42496.json HTTP/1.1" 200 1484
+2026-10-02 17:49:53,171 - INFO - CVE-2026-42496 Important 2026-05-26
+2026-10-02 17:49:53,172 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:53,617 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42501.json HTTP/1.1" 200 3037
+2026-10-02 17:49:53,619 - INFO - CVE-2026-42501 Moderate 2026-05-07
+2026-10-02 17:49:53,620 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:53,854 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42502.json HTTP/1.1" 200 9361
+2026-10-02 17:49:53,856 - INFO - CVE-2026-42502 Moderate 2026-05-22
+2026-10-02 17:49:53,857 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:54,438 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42533.json HTTP/1.1" 200 1769
+2026-10-02 17:49:54,440 - INFO - CVE-2026-42533 Important 2026-07-15
+2026-10-02 17:49:54,441 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:54,699 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42506.json HTTP/1.1" 200 7837
+2026-10-02 17:49:54,702 - INFO - CVE-2026-42506 Moderate 2026-05-22
+2026-10-02 17:49:54,703 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:55,161 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42534.json HTTP/1.1" 200 1841
+2026-10-02 17:49:55,163 - INFO - CVE-2026-42534 Important 2026-05-20
+2026-10-02 17:49:55,164 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:55,732 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43011.json HTTP/1.1" 200 963
+2026-10-02 17:49:55,733 - INFO - CVE-2026-43011: does not affect Red Hat software.
+2026-10-02 17:49:55,734 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:55,967 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42508.json HTTP/1.1" 200 4083
+2026-10-02 17:49:55,969 - INFO - CVE-2026-42508 Important 2026-05-22
+2026-10-02 17:49:55,970 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:56,447 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42009.json HTTP/1.1" 200 2414
+2026-10-02 17:49:56,449 - INFO - CVE-2026-42009 Important 2026-04-29
+2026-10-02 17:49:56,450 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:56,957 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-42010.json HTTP/1.1" 200 2189
+2026-10-02 17:49:56,959 - INFO - CVE-2026-42010 Important 2026-04-29
+2026-10-02 17:49:56,960 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:57,443 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43025.json HTTP/1.1" 200 1273
+2026-10-02 17:49:57,444 - INFO - CVE-2026-43025 Moderate 2026-05-01
+2026-10-02 17:49:57,445 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:57,949 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43038.json HTTP/1.1" 200 2226
+2026-10-02 17:49:57,950 - INFO - CVE-2026-43038 Important 2026-05-01
+2026-10-02 17:49:57,951 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:58,222 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43114.json HTTP/1.1" 200 2491
+2026-10-02 17:49:58,224 - INFO - CVE-2026-43114: does not affect Red Hat software.
+2026-10-02 17:49:58,224 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:58,692 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43120.json HTTP/1.1" 200 1394
+2026-10-02 17:49:58,694 - INFO - CVE-2026-43120 Moderate 2026-05-06
+2026-10-02 17:49:58,695 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:58,949 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43027.json HTTP/1.1" 200 1967
+2026-10-02 17:49:58,950 - INFO - CVE-2026-43027 Moderate 2026-05-01
+2026-10-02 17:49:58,951 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:59,426 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43125.json HTTP/1.1" 200 1613
+2026-10-02 17:49:59,428 - INFO - CVE-2026-43125 Important 2026-05-06
+2026-10-02 17:49:59,429 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:49:59,660 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43037.json HTTP/1.1" 200 2941
+2026-10-02 17:49:59,661 - INFO - CVE-2026-43037 Critical 2026-05-01
+2026-10-02 17:49:59,662 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:00,224 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43186.json HTTP/1.1" 200 2125
+2026-10-02 17:50:00,226 - INFO - CVE-2026-43186: does not affect Red Hat software.
+2026-10-02 17:50:00,227 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:00,712 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43190.json HTTP/1.1" 200 2072
+2026-10-02 17:50:00,714 - INFO - CVE-2026-43190 Moderate 2026-05-06
+2026-10-02 17:50:00,715 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:01,178 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43366.json HTTP/1.1" 200 1159
+2026-10-02 17:50:01,179 - INFO - CVE-2026-43366: does not affect Red Hat software.
+2026-10-02 17:50:01,180 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:01,650 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43384.json HTTP/1.1" 200 768
+2026-10-02 17:50:01,651 - INFO - CVE-2026-43384: does not affect Red Hat software.
+2026-10-02 17:50:01,652 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:01,923 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43499.json HTTP/1.1" 200 2078
+2026-10-02 17:50:01,925 - INFO - CVE-2026-43499 Important 2026-05-21
+2026-10-02 17:50:01,926 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:02,427 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43437.json HTTP/1.1" 200 1437
+2026-10-02 17:50:02,429 - INFO - CVE-2026-43437 Moderate 2026-05-08
+2026-10-02 17:50:02,430 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:02,883 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43500.json HTTP/1.1" 200 1934
+2026-10-02 17:50:02,885 - INFO - CVE-2026-43500: does not affect Red Hat software.
+2026-10-02 17:50:02,886 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:03,339 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43494.json HTTP/1.1" 200 1342
+2026-10-02 17:50:03,341 - INFO - CVE-2026-43494: does not affect Red Hat software.
+2026-10-02 17:50:03,342 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:03,817 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-44390.json HTTP/1.1" 200 1759
+2026-10-02 17:50:03,818 - INFO - CVE-2026-44390 Important 2026-05-20
+2026-10-02 17:50:03,819 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:04,354 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45186.json HTTP/1.1" 200 1535
+2026-10-02 17:50:04,355 - INFO - CVE-2026-45186 Important 2026-05-10
+2026-10-02 17:50:04,356 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:04,791 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-44662.json HTTP/1.1" 404 29
+2026-10-02 17:50:04,792 - ERROR - CVE-2026-44662: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:04,794 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:05,293 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-44740.json HTTP/1.1" 200 6601
+2026-10-02 17:50:05,296 - INFO - CVE-2026-44740 Important 2026-06-01
+2026-10-02 17:50:05,296 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:05,757 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-43501.json HTTP/1.1" 200 2210
+2026-10-02 17:50:05,759 - INFO - CVE-2026-43501: does not affect Red Hat software.
+2026-10-02 17:50:05,760 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:06,218 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45686.json HTTP/1.1" 404 29
+2026-10-02 17:50:06,220 - ERROR - CVE-2026-45686: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:06,221 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:06,687 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45678.json HTTP/1.1" 404 29
+2026-10-02 17:50:06,688 - ERROR - CVE-2026-45678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:06,689 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:07,154 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45682.json HTTP/1.1" 404 29
+2026-10-02 17:50:07,156 - ERROR - CVE-2026-45682: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:07,157 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:07,622 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45685.json HTTP/1.1" 404 29
+2026-10-02 17:50:07,624 - ERROR - CVE-2026-45685: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:07,625 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:08,141 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45447.json HTTP/1.1" 200 3212
+2026-10-02 17:50:08,143 - INFO - CVE-2026-45447 Important 2026-06-09
+2026-10-02 17:50:08,144 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:08,609 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45784.json HTTP/1.1" 200 1118
+2026-10-02 17:50:08,611 - INFO - CVE-2026-45784: does not affect Red Hat software.
+2026-10-02 17:50:08,612 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:09,088 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45972.json HTTP/1.1" 200 902
+2026-10-02 17:50:09,090 - INFO - CVE-2026-45972: does not affect Red Hat software.
+2026-10-02 17:50:09,091 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:09,332 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45984.json HTTP/1.1" 200 1981
+2026-10-02 17:50:09,334 - INFO - CVE-2026-45984 Important 2026-05-27
+2026-10-02 17:50:09,334 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:09,549 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-45970.json HTTP/1.1" 200 2665
+2026-10-02 17:50:09,550 - INFO - CVE-2026-45970 Moderate 2026-05-27
+2026-10-02 17:50:09,551 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:10,047 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46120.json HTTP/1.1" 200 1840
+2026-10-02 17:50:10,048 - INFO - CVE-2026-46120 Moderate 2026-05-28
+2026-10-02 17:50:10,049 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:10,260 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46113.json HTTP/1.1" 200 3061
+2026-10-02 17:50:10,262 - INFO - CVE-2026-46113 Moderate 2026-05-28
+2026-10-02 17:50:10,262 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:10,473 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46173.json HTTP/1.1" 200 1810
+2026-10-02 17:50:10,475 - INFO - CVE-2026-46173: does not affect Red Hat software.
+2026-10-02 17:50:10,476 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:10,702 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46595.json HTTP/1.1" 200 4519
+2026-10-02 17:50:10,707 - INFO - CVE-2026-46595: does not affect Red Hat software.
+2026-10-02 17:50:10,708 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:10,930 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46243.json HTTP/1.1" 200 2821
+2026-10-02 17:50:10,932 - INFO - CVE-2026-46243 Important 2026-05-26
+2026-10-02 17:50:10,933 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:11,134 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46598.json HTTP/1.1" 200 3340
+2026-10-02 17:50:11,136 - INFO - CVE-2026-46598 Moderate 2026-05-22
+2026-10-02 17:50:11,136 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:11,378 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46227.json HTTP/1.1" 200 2859
+2026-10-02 17:50:11,379 - INFO - CVE-2026-46227 Important 2026-05-28
+2026-10-02 17:50:11,381 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:11,857 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48615.json HTTP/1.1" 200 1499
+2026-10-02 17:50:11,858 - INFO - CVE-2026-48615 Moderate 2026-06-26
+2026-10-02 17:50:11,859 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:12,126 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-46597.json HTTP/1.1" 200 6699
+2026-10-02 17:50:12,128 - INFO - CVE-2026-46597 Important 2026-05-22
+2026-10-02 17:50:12,129 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:12,611 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48618.json HTTP/1.1" 200 1540
+2026-10-02 17:50:12,613 - INFO - CVE-2026-48618 Important 2026-06-26
+2026-10-02 17:50:12,614 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:12,857 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-4775.json HTTP/1.1" 200 2028
+2026-10-02 17:50:12,859 - INFO - CVE-2026-4775 Important 2026-03-24
+2026-10-02 17:50:12,860 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:13,343 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48934.json HTTP/1.1" 200 1250
+2026-10-02 17:50:13,345 - INFO - CVE-2026-48934 Moderate 2026-06-26
+2026-10-02 17:50:13,346 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:13,830 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48928.json HTTP/1.1" 200 1300
+2026-10-02 17:50:13,832 - INFO - CVE-2026-48928 Moderate 2026-06-26
+2026-10-02 17:50:13,833 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:14,338 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48930.json HTTP/1.1" 200 1474
+2026-10-02 17:50:14,340 - INFO - CVE-2026-48930 Moderate 2026-06-26
+2026-10-02 17:50:14,341 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:14,889 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48978.json HTTP/1.1" 200 1626
+2026-10-02 17:50:14,891 - INFO - CVE-2026-48978: does not affect Red Hat software.
+2026-10-02 17:50:14,892 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:15,352 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48935.json HTTP/1.1" 200 1277
+2026-10-02 17:50:15,353 - INFO - CVE-2026-48935 Low 2026-06-26
+2026-10-02 17:50:15,354 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:15,816 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48619.json HTTP/1.1" 200 1336
+2026-10-02 17:50:15,818 - INFO - CVE-2026-48619 Moderate 2026-06-26
+2026-10-02 17:50:15,819 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:16,529 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-48933.json HTTP/1.1" 200 1416
+2026-10-02 17:50:16,530 - INFO - CVE-2026-48933 Important 2026-06-26
+2026-10-02 17:50:16,531 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:17,036 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-50031.json HTTP/1.1" 200 1848
+2026-10-02 17:50:17,038 - INFO - CVE-2026-50031 Moderate 2026-06-03
+2026-10-02 17:50:17,039 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:17,488 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-52943.json HTTP/1.1" 200 1905
+2026-10-02 17:50:17,489 - INFO - CVE-2026-52943: does not affect Red Hat software.
+2026-10-02 17:50:17,490 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:17,953 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-52909.json HTTP/1.1" 200 1061
+2026-10-02 17:50:17,955 - INFO - CVE-2026-52909 Moderate 2026-06-19
+2026-10-02 17:50:17,956 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:18,411 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-49975.json HTTP/1.1" 200 1835
+2026-10-02 17:50:18,413 - INFO - CVE-2026-49975 Important 2026-06-03
+2026-10-02 17:50:18,414 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:18,636 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-53266.json HTTP/1.1" 200 2303
+2026-10-02 17:50:18,637 - INFO - CVE-2026-53266 Important 2026-06-01
+2026-10-02 17:50:18,638 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:19,160 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-54059.json HTTP/1.1" 200 1778
+2026-10-02 17:50:19,161 - INFO - CVE-2026-54059 Important 2026-07-06
+2026-10-02 17:50:19,162 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:19,373 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-53359.json HTTP/1.1" 200 3258
+2026-10-02 17:50:19,375 - INFO - CVE-2026-53359 Important 2026-07-04
+2026-10-02 17:50:19,376 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:19,627 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-54512.json HTTP/1.1" 200 6439
+2026-10-02 17:50:19,629 - INFO - CVE-2026-54512 Important 2026-06-23
+2026-10-02 17:50:19,631 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:20,115 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-54060.json HTTP/1.1" 200 3210
+2026-10-02 17:50:20,117 - INFO - CVE-2026-54060 Important 2026-07-06
+2026-10-02 17:50:20,118 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:20,704 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-53362.json HTTP/1.1" 200 1854
+2026-10-02 17:50:20,706 - INFO - CVE-2026-53362: does not affect Red Hat software.
+2026-10-02 17:50:20,707 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:21,177 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-53166.json HTTP/1.1" 200 1755
+2026-10-02 17:50:21,178 - INFO - CVE-2026-53166 Moderate 2026-06-25
+2026-10-02 17:50:21,179 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:21,664 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-5260.json HTTP/1.1" 200 1905
+2026-10-02 17:50:21,665 - INFO - CVE-2026-5260 Moderate 2026-04-29
+2026-10-02 17:50:21,667 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:22,159 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-50538.json HTTP/1.1" 404 29
+2026-10-02 17:50:22,160 - ERROR - CVE-2026-50538: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:22,162 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:22,748 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-55379.json HTTP/1.1" 200 3381
+2026-10-02 17:50:22,750 - INFO - CVE-2026-55379 Important 2026-07-06
+2026-10-02 17:50:22,751 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:23,213 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-55199.json HTTP/1.1" 200 1386
+2026-10-02 17:50:23,215 - INFO - CVE-2026-55199: does not affect Red Hat software.
+2026-10-02 17:50:23,216 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:23,676 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-55380.json HTTP/1.1" 200 3493
+2026-10-02 17:50:23,678 - INFO - CVE-2026-55380 Important 2026-07-06
+2026-10-02 17:50:23,679 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:24,191 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-55200.json HTTP/1.1" 200 1757
+2026-10-02 17:50:24,192 - INFO - CVE-2026-55200: does not affect Red Hat software.
+2026-10-02 17:50:24,193 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:24,395 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-55999.json HTTP/1.1" 200 1691
+2026-10-02 17:50:24,396 - INFO - CVE-2026-55999 Important 2026-07-08
+2026-10-02 17:50:24,397 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:24,918 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-56000.json HTTP/1.1" 200 1328
+2026-10-02 17:50:24,919 - INFO - CVE-2026-56000 Important 2026-07-08
+2026-10-02 17:50:24,920 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:25,146 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-54513.json HTTP/1.1" 200 5293
+2026-10-02 17:50:25,148 - INFO - CVE-2026-54513 Important 2026-06-23
+2026-10-02 17:50:25,149 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:25,642 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-56434.json HTTP/1.1" 200 1886
+2026-10-02 17:50:25,644 - INFO - CVE-2026-56434 Moderate 2026-07-15
+2026-10-02 17:50:25,645 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:26,108 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-59083.json HTTP/1.1" 200 1860
+2026-10-02 17:50:26,109 - INFO - CVE-2026-59083 Low 2026-07-14
+2026-10-02 17:50:26,110 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:26,590 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-59084.json HTTP/1.1" 200 1800
+2026-10-02 17:50:26,592 - INFO - CVE-2026-59084 Low 2026-07-14
+2026-10-02 17:50:26,593 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:26,820 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-57231.json HTTP/1.1" 200 1977
+2026-10-02 17:50:26,821 - INFO - CVE-2026-57231 Important 2026-06-26
+2026-10-02 17:50:26,822 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:27,284 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-59762.json HTTP/1.1" 404 29
+2026-10-02 17:50:27,285 - ERROR - CVE-2026-59762: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:27,286 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:27,828 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-6722.json HTTP/1.1" 200 1646
+2026-10-02 17:50:27,829 - INFO - CVE-2026-6722 Important 2026-05-10
+2026-10-02 17:50:27,830 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:28,360 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-6733.json HTTP/1.1" 200 2448
+2026-10-02 17:50:28,362 - INFO - CVE-2026-6733 Low 2026-06-17
+2026-10-02 17:50:28,363 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:28,827 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-60005.json HTTP/1.1" 200 1774
+2026-10-02 17:50:28,829 - INFO - CVE-2026-60005 Important 2026-07-15
+2026-10-02 17:50:28,830 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:29,303 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-6914.json HTTP/1.1" 404 29
+2026-10-02 17:50:29,304 - ERROR - CVE-2026-6914: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:29,305 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:29,787 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8053.json HTTP/1.1" 404 29
+2026-10-02 17:50:29,789 - ERROR - CVE-2026-8053: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:29,790 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:30,237 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-7261.json HTTP/1.1" 200 1697
+2026-10-02 17:50:30,239 - INFO - CVE-2026-7261 Moderate 2026-05-10
+2026-10-02 17:50:30,240 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:30,692 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-6915.json HTTP/1.1" 200 1062
+2026-10-02 17:50:30,693 - INFO - CVE-2026-6915: does not affect Red Hat software.
+2026-10-02 17:50:30,694 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:31,163 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-6734.json HTTP/1.1" 200 3685
+2026-10-02 17:50:31,165 - INFO - CVE-2026-6734 Important 2026-06-17
+2026-10-02 17:50:31,166 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:31,622 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8200.json HTTP/1.1" 404 29
+2026-10-02 17:50:31,623 - ERROR - CVE-2026-8200: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:31,624 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:32,105 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8177.json HTTP/1.1" 200 1647
+2026-10-02 17:50:32,107 - INFO - CVE-2026-8177 Important 2026-05-10
+2026-10-02 17:50:32,108 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:32,580 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8199.json HTTP/1.1" 404 29
+2026-10-02 17:50:32,582 - ERROR - CVE-2026-8199: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:32,583 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:33,036 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8202.json HTTP/1.1" 404 29
+2026-10-02 17:50:33,037 - ERROR - CVE-2026-8202: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:33,038 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:34,456 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8201.json HTTP/1.1" 404 29
+2026-10-02 17:50:34,457 - ERROR - CVE-2026-8201: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 17:50:34,458 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:35,671 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8286.json HTTP/1.1" 200 2131
+2026-10-02 17:50:35,673 - INFO - CVE-2026-8286 Important 2026-07-03
+2026-10-02 17:50:35,674 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:35,875 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8631.json HTTP/1.1" 200 1292
+2026-10-02 17:50:35,876 - INFO - CVE-2026-8631 Important 2026-05-20
+2026-10-02 17:50:35,877 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:36,344 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8376.json HTTP/1.1" 200 1504
+2026-10-02 17:50:36,346 - INFO - CVE-2026-8376: does not affect Red Hat software.
+2026-10-02 17:50:36,347 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:36,811 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8632.json HTTP/1.1" 200 1193
+2026-10-02 17:50:36,813 - INFO - CVE-2026-8632 Important 2026-05-20
+2026-10-02 17:50:36,814 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:37,340 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8924.json HTTP/1.1" 200 1833
+2026-10-02 17:50:37,341 - INFO - CVE-2026-8924 Moderate 2026-07-03
+2026-10-02 17:50:37,342 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:37,786 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8458.json HTTP/1.1" 200 1924
+2026-10-02 17:50:37,787 - INFO - CVE-2026-8458 Important 2026-07-03
+2026-10-02 17:50:37,788 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:37,979 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9080.json HTTP/1.1" 200 1705
+2026-10-02 17:50:37,981 - INFO - CVE-2026-9080: does not affect Red Hat software.
+2026-10-02 17:50:37,982 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:38,178 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8925.json HTTP/1.1" 200 1475
+2026-10-02 17:50:38,180 - INFO - CVE-2026-8925: does not affect Red Hat software.
+2026-10-02 17:50:38,181 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:38,626 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8926.json HTTP/1.1" 200 1415
+2026-10-02 17:50:38,628 - INFO - CVE-2026-8926: does not affect Red Hat software.
+2026-10-02 17:50:38,629 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:38,859 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9545.json HTTP/1.1" 200 1739
+2026-10-02 17:50:38,861 - INFO - CVE-2026-9545: does not affect Red Hat software.
+2026-10-02 17:50:38,862 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:40,119 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9547.json HTTP/1.1" 200 2242
+2026-10-02 17:50:40,121 - INFO - CVE-2026-9547: does not affect Red Hat software.
+2026-10-02 17:50:40,122 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:40,574 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9678.json HTTP/1.1" 200 2435
+2026-10-02 17:50:40,576 - INFO - CVE-2026-9678 Moderate 2026-06-17
+2026-10-02 17:50:40,577 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:41,093 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-8927.json HTTP/1.1" 200 2097
+2026-10-02 17:50:41,095 - INFO - CVE-2026-8927 Important 2026-07-03
+2026-10-02 17:50:41,096 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:41,575 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9697.json HTTP/1.1" 200 3811
+2026-10-02 17:50:41,577 - INFO - CVE-2026-9697 Important 2026-06-17
+2026-10-02 17:50:41,578 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:42,200 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9079.json HTTP/1.1" 200 1589
+2026-10-02 17:50:42,202 - INFO - CVE-2026-9079: does not affect Red Hat software.
+2026-10-02 17:50:42,203 - DEBUG - Starting new HTTPS connection (1): access.redhat.com:443
+2026-10-02 17:50:43,079 - DEBUG - https://access.redhat.com:443 "GET /hydra/rest/securitydata/cve/CVE-2026-9698.json HTTP/1.1" 200 1564
+2026-10-02 17:50:43,081 - INFO - CVE-2026-9698 Important 2026-06-09
+2026-10-02 18:23:52,017 - INFO - Processing 261 CVEs from /home/ubuntu/redhat_security_fetcher/input/cves.d260721.txt
+2026-10-02 18:23:52,240 - INFO - CVE-2024-12224 Moderate 2025-05-30
+2026-10-02 18:23:52,696 - ERROR - CVE-2024-32650: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:23:53,018 - INFO - CVE-2024-12243 Moderate 2025-02-10
+2026-10-02 18:23:53,483 - INFO - CVE-2024-0553 Moderate 2024-01-16
+2026-10-02 18:23:53,956 - INFO - CVE-2024-58266 Low 2025-07-27
+2026-10-02 18:23:54,417 - INFO - CVE-2025-14179: does not affect Red Hat software.
+2026-10-02 18:23:54,886 - INFO - CVE-2025-15661: does not affect Red Hat software.
+2026-10-02 18:23:55,615 - INFO - CVE-2025-30204 Important 2025-03-21
+2026-10-02 18:23:55,867 - INFO - CVE-2025-47913 Important 2025-11-13
+2026-10-02 18:23:56,346 - INFO - CVE-2025-3416 Low 2025-04-04
+2026-10-02 18:23:56,829 - INFO - CVE-2025-58160 Low 2025-08-29
+2026-10-02 18:23:57,271 - ERROR - CVE-2023-26964: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:23:57,710 - ERROR - CVE-2024-43806: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:23:58,275 - INFO - CVE-2025-61729 Important 2025-12-02
+2026-10-02 18:23:58,759 - INFO - CVE-2025-68461: does not affect Red Hat software.
+2026-10-02 18:23:59,244 - INFO - CVE-2025-67030 Important 2026-03-25
+2026-10-02 18:23:59,730 - INFO - CVE-2025-61726 Important 2026-01-28
+2026-10-02 18:24:00,202 - INFO - CVE-2025-71066 Moderate 2026-01-13
+2026-10-02 18:24:00,471 - INFO - CVE-2025-14831 Moderate 2026-02-09
+2026-10-02 18:24:01,119 - INFO - CVE-2025-69725 Moderate 2026-02-19
+2026-10-02 18:24:01,654 - INFO - CVE-2026-10536: does not affect Red Hat software.
+2026-10-02 18:24:02,126 - INFO - CVE-2025-71089 Moderate 2026-01-13
+2026-10-02 18:24:02,634 - INFO - CVE-2026-11525 Low 2026-06-17
+2026-10-02 18:24:03,108 - INFO - CVE-2026-10722 Moderate 2026-06-03
+2026-10-02 18:24:03,638 - INFO - CVE-2025-9820 Low 2025-11-18
+2026-10-02 18:24:04,136 - INFO - CVE-2026-11526: does not affect Red Hat software.
+2026-10-02 18:24:04,267 - INFO - CVE-2026-12064: does not affect Red Hat software.
+2026-10-02 18:24:04,758 - INFO - CVE-2026-12151 Important 2026-06-17
+2026-10-02 18:24:05,233 - INFO - CVE-2026-12290 Important 2026-06-16
+2026-10-02 18:24:05,710 - INFO - CVE-2026-12291 Important 2026-06-16
+2026-10-02 18:24:06,244 - INFO - CVE-2026-12292 Important 2026-06-16
+2026-10-02 18:24:06,713 - INFO - CVE-2026-12294 Important 2026-06-16
+2026-10-02 18:24:07,236 - INFO - CVE-2026-12289 Important 2026-06-16
+2026-10-02 18:24:07,724 - INFO - CVE-2026-12296 Important 2026-06-16
+2026-10-02 18:24:08,259 - INFO - CVE-2026-12295 Important 2026-06-16
+2026-10-02 18:24:08,759 - INFO - CVE-2026-12298 Important 2026-06-16
+2026-10-02 18:24:09,264 - INFO - CVE-2026-12299 Important 2026-06-16
+2026-10-02 18:24:09,713 - INFO - CVE-2026-12297 Important 2026-06-16
+2026-10-02 18:24:10,159 - ERROR - CVE-2026-10842: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:10,633 - INFO - CVE-2026-10649 Important 2026-06-16
+2026-10-02 18:24:11,105 - INFO - CVE-2026-12305 Moderate 2026-06-16
+2026-10-02 18:24:11,555 - INFO - CVE-2026-12304 Moderate 2026-06-16
+2026-10-02 18:24:11,997 - INFO - CVE-2026-12302 Moderate 2026-06-16
+2026-10-02 18:24:12,519 - INFO - CVE-2026-12307 Moderate 2026-06-16
+2026-10-02 18:24:13,019 - INFO - CVE-2026-12309 Moderate 2026-06-16
+2026-10-02 18:24:13,468 - INFO - CVE-2026-12308 Moderate 2026-06-16
+2026-10-02 18:24:13,962 - INFO - CVE-2026-12306 Moderate 2026-06-16
+2026-10-02 18:24:14,425 - INFO - CVE-2026-12312 Moderate 2026-06-16
+2026-10-02 18:24:14,894 - INFO - CVE-2026-12311 Moderate 2026-06-16
+2026-10-02 18:24:15,490 - INFO - CVE-2026-12315 Moderate 2026-06-16
+2026-10-02 18:24:15,956 - INFO - CVE-2026-12314 Moderate 2026-06-16
+2026-10-02 18:24:16,456 - INFO - CVE-2026-12318: does not affect Red Hat software.
+2026-10-02 18:24:16,951 - INFO - CVE-2026-12313 Moderate 2026-06-16
+2026-10-02 18:24:17,500 - INFO - CVE-2026-12327 Moderate 2026-06-16
+2026-10-02 18:24:18,009 - INFO - CVE-2026-12324 Low 2026-06-16
+2026-10-02 18:24:18,527 - INFO - CVE-2026-12310 Moderate 2026-06-16
+2026-10-02 18:24:19,000 - INFO - CVE-2026-12330 Moderate 2026-06-16
+2026-10-02 18:24:19,618 - INFO - CVE-2026-12328 Important 2026-06-16
+2026-10-02 18:24:20,065 - INFO - CVE-2026-12329 Important 2026-06-16
+2026-10-02 18:24:20,594 - INFO - CVE-2026-12325 Low 2026-06-16
+2026-10-02 18:24:20,849 - INFO - CVE-2026-15308 Important 2026-07-09
+2026-10-02 18:24:21,397 - INFO - CVE-2026-20213: does not affect Red Hat software.
+2026-10-02 18:24:21,976 - INFO - CVE-2026-12725 Moderate 2026-04-21
+2026-10-02 18:24:22,450 - INFO - CVE-2026-20216: does not affect Red Hat software.
+2026-10-02 18:24:22,890 - INFO - CVE-2026-20215: does not affect Red Hat software.
+2026-10-02 18:24:23,358 - INFO - CVE-2026-20214: does not affect Red Hat software.
+2026-10-02 18:24:23,843 - INFO - CVE-2026-20243: does not affect Red Hat software.
+2026-10-02 18:24:24,284 - INFO - CVE-2026-12969: does not affect Red Hat software.
+2026-10-02 18:24:24,795 - ERROR - CVE-2026-20297: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:25,264 - INFO - CVE-2026-20217: does not affect Red Hat software.
+2026-10-02 18:24:25,733 - INFO - CVE-2026-20244: does not affect Red Hat software.
+2026-10-02 18:24:26,189 - INFO - CVE-2026-24051: does not affect Red Hat software.
+2026-10-02 18:24:26,686 - ERROR - CVE-2026-21892: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:27,157 - INFO - CVE-2026-25680: does not affect Red Hat software.
+2026-10-02 18:24:27,356 - INFO - CVE-2026-23393: does not affect Red Hat software.
+2026-10-02 18:24:27,836 - INFO - CVE-2026-25681 Important 2026-05-22
+2026-10-02 18:24:28,311 - INFO - CVE-2026-25727 Moderate 2026-02-06
+2026-10-02 18:24:28,530 - INFO - CVE-2026-25679 Important 2026-03-06
+2026-10-02 18:24:28,991 - INFO - CVE-2026-14544 Important 2026-07-03
+2026-10-02 18:24:29,468 - INFO - CVE-2026-12912 Important 2026-04-16
+2026-10-02 18:24:29,939 - INFO - CVE-2026-27143 Moderate 2026-04-08
+2026-10-02 18:24:30,423 - INFO - CVE-2026-27140 Important 2026-04-08
+2026-10-02 18:24:31,053 - INFO - CVE-2026-27144 Moderate 2026-04-08
+2026-10-02 18:24:31,573 - INFO - CVE-2026-27136 Important 2026-05-22
+2026-10-02 18:24:32,125 - INFO - CVE-2026-28390 Moderate 2026-04-07
+2026-10-02 18:24:32,607 - INFO - CVE-2026-29146 Important 2026-04-09
+2026-10-02 18:24:33,072 - INFO - CVE-2026-29181: does not affect Red Hat software.
+2026-10-02 18:24:33,516 - INFO - CVE-2026-27137 Important 2026-03-06
+2026-10-02 18:24:33,993 - INFO - CVE-2026-27145 Important 2026-06-02
+2026-10-02 18:24:34,294 - INFO - CVE-2026-31505 Moderate 2026-04-22
+2026-10-02 18:24:34,779 - INFO - CVE-2026-31402 Important 2026-04-03
+2026-10-02 18:24:35,120 - INFO - CVE-2026-31533 Moderate 2026-04-23
+2026-10-02 18:24:35,358 - INFO - CVE-2026-31570 Moderate 2026-04-24
+2026-10-02 18:24:35,603 - INFO - CVE-2026-31586 Moderate 2026-04-24
+2026-10-02 18:24:36,163 - INFO - CVE-2026-31607: does not affect Red Hat software.
+2026-10-02 18:24:36,412 - INFO - CVE-2026-31637 Moderate 2026-04-24
+2026-10-02 18:24:36,932 - INFO - CVE-2026-31669 Moderate 2026-04-24
+2026-10-02 18:24:37,175 - INFO - CVE-2026-31659: does not affect Red Hat software.
+2026-10-02 18:24:37,646 - INFO - CVE-2026-31685 Moderate 2026-04-25
+2026-10-02 18:24:37,846 - INFO - CVE-2026-31411 Moderate 2026-04-08
+2026-10-02 18:24:38,108 - INFO - CVE-2026-31718: does not affect Red Hat software.
+2026-10-02 18:24:38,573 - INFO - CVE-2026-31790: does not affect Red Hat software.
+2026-10-02 18:24:38,878 - INFO - CVE-2026-31758 Moderate 2026-05-01
+2026-10-02 18:24:39,348 - INFO - CVE-2026-32281 Moderate 2026-04-08
+2026-10-02 18:24:39,902 - INFO - CVE-2026-32282 Moderate 2026-04-08
+2026-10-02 18:24:40,364 - INFO - CVE-2026-32280 Important 2026-04-08
+2026-10-02 18:24:40,798 - INFO - CVE-2026-32285: does not affect Red Hat software.
+2026-10-02 18:24:41,265 - INFO - CVE-2026-32287: does not affect Red Hat software.
+2026-10-02 18:24:41,782 - INFO - CVE-2026-32283 Important 2026-04-08
+2026-10-02 18:24:42,238 - INFO - CVE-2026-33554 Moderate 2026-03-24
+2026-10-02 18:24:42,704 - INFO - CVE-2026-33532 Moderate 2026-03-26
+2026-10-02 18:24:43,162 - INFO - CVE-2026-33815: does not affect Red Hat software.
+2026-10-02 18:24:43,684 - INFO - CVE-2026-33811 Important 2026-05-07
+2026-10-02 18:24:44,176 - INFO - CVE-2026-33845 Important 2026-04-30
+2026-10-02 18:24:44,628 - INFO - CVE-2026-33810 Important 2026-04-08
+2026-10-02 18:24:45,137 - INFO - CVE-2026-33814 Important 2026-05-07
+2026-10-02 18:24:45,603 - INFO - CVE-2026-34486 Important 2026-04-09
+2026-10-02 18:24:45,871 - INFO - CVE-2026-34986 Important 2026-04-06
+2026-10-02 18:24:46,434 - INFO - CVE-2026-33846 Important 2026-05-04
+2026-10-02 18:24:46,927 - ERROR - CVE-2026-36849: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:47,390 - INFO - CVE-2026-39827: does not affect Red Hat software.
+2026-10-02 18:24:47,515 - INFO - CVE-2026-39822 Important 2026-07-08
+2026-10-02 18:24:47,996 - INFO - CVE-2026-3833 Moderate 2026-04-30
+2026-10-02 18:24:48,505 - INFO - CVE-2026-39821 Important 2026-05-22
+2026-10-02 18:24:48,981 - INFO - CVE-2026-39831 Important 2026-05-22
+2026-10-02 18:24:49,569 - INFO - CVE-2026-39829 Important 2026-05-22
+2026-10-02 18:24:50,039 - INFO - CVE-2026-39832 Important 2026-05-22
+2026-10-02 18:24:50,550 - INFO - CVE-2026-39830 Important 2026-05-22
+2026-10-02 18:24:51,077 - INFO - CVE-2026-39834: does not affect Red Hat software.
+2026-10-02 18:24:51,624 - INFO - CVE-2026-39828: does not affect Red Hat software.
+2026-10-02 18:24:51,876 - INFO - CVE-2026-39833 Moderate 2026-05-22
+2026-10-02 18:24:53,162 - INFO - CVE-2026-39836 Moderate 2026-05-07
+2026-10-02 18:24:53,666 - INFO - CVE-2026-39882: does not affect Red Hat software.
+2026-10-02 18:24:54,143 - INFO - CVE-2026-39883: does not affect Red Hat software.
+2026-10-02 18:24:55,124 - INFO - CVE-2026-40622 Moderate 2026-05-20
+2026-10-02 18:24:55,622 - ERROR - CVE-2026-41676: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:56,072 - INFO - CVE-2026-41401 Moderate 2026-05-26
+2026-10-02 18:24:56,534 - ERROR - CVE-2026-41677: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:56,987 - INFO - CVE-2026-41292 Important 2026-05-20
+2026-10-02 18:24:57,496 - INFO - CVE-2026-39835 Important 2026-05-22
+2026-10-02 18:24:57,980 - ERROR - CVE-2026-41681: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:58,460 - INFO - CVE-2026-41889 Moderate 2026-05-08
+2026-10-02 18:24:58,941 - ERROR - CVE-2026-41678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:59,444 - ERROR - CVE-2026-41898: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:24:59,969 - INFO - CVE-2026-41991 Moderate 2026-06-29
+2026-10-02 18:25:00,297 - INFO - CVE-2026-41992 Low 2026-06-29
+2026-10-02 18:25:00,761 - INFO - CVE-2026-4176 Moderate 2026-03-29
+2026-10-02 18:25:01,297 - INFO - CVE-2026-42327: does not affect Red Hat software.
+2026-10-02 18:25:01,907 - INFO - CVE-2026-42055 Important 2026-06-17
+2026-10-02 18:25:02,439 - INFO - CVE-2026-42338 Important 2026-05-12
+2026-10-02 18:25:02,899 - INFO - CVE-2026-42496 Important 2026-05-26
+2026-10-02 18:25:03,385 - INFO - CVE-2026-42501 Moderate 2026-05-07
+2026-10-02 18:25:03,861 - INFO - CVE-2026-42502 Moderate 2026-05-22
+2026-10-02 18:25:04,337 - INFO - CVE-2026-42533 Important 2026-07-15
+2026-10-02 18:25:04,873 - INFO - CVE-2026-42506 Moderate 2026-05-22
+2026-10-02 18:25:05,316 - INFO - CVE-2026-42534 Important 2026-05-20
+2026-10-02 18:25:05,535 - INFO - CVE-2026-43011: does not affect Red Hat software.
+2026-10-02 18:25:06,003 - INFO - CVE-2026-42508 Important 2026-05-22
+2026-10-02 18:25:06,945 - INFO - CVE-2026-42009 Important 2026-04-29
+2026-10-02 18:25:07,484 - INFO - CVE-2026-42010 Important 2026-04-29
+2026-10-02 18:25:07,677 - INFO - CVE-2026-43025 Moderate 2026-05-01
+2026-10-02 18:25:08,138 - INFO - CVE-2026-43038 Important 2026-05-01
+2026-10-02 18:25:08,615 - INFO - CVE-2026-43114: does not affect Red Hat software.
+2026-10-02 18:25:08,857 - INFO - CVE-2026-43120 Moderate 2026-05-06
+2026-10-02 18:25:09,322 - INFO - CVE-2026-43027 Moderate 2026-05-01
+2026-10-02 18:25:09,750 - INFO - CVE-2026-43125 Important 2026-05-06
+2026-10-02 18:25:10,337 - INFO - CVE-2026-43037 Critical 2026-05-01
+2026-10-02 18:25:10,839 - INFO - CVE-2026-43186: does not affect Red Hat software.
+2026-10-02 18:25:11,289 - INFO - CVE-2026-43190 Moderate 2026-05-06
+2026-10-02 18:25:11,505 - INFO - CVE-2026-43366: does not affect Red Hat software.
+2026-10-02 18:25:11,736 - INFO - CVE-2026-43384: does not affect Red Hat software.
+2026-10-02 18:25:12,263 - INFO - CVE-2026-43499 Important 2026-05-21
+2026-10-02 18:25:12,484 - INFO - CVE-2026-43437 Moderate 2026-05-08
+2026-10-02 18:25:12,784 - INFO - CVE-2026-43500: does not affect Red Hat software.
+2026-10-02 18:25:13,013 - INFO - CVE-2026-43494: does not affect Red Hat software.
+2026-10-02 18:25:13,474 - INFO - CVE-2026-44390 Important 2026-05-20
+2026-10-02 18:25:13,708 - INFO - CVE-2026-45186 Important 2026-05-10
+2026-10-02 18:25:14,179 - ERROR - CVE-2026-44662: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:14,644 - INFO - CVE-2026-44740 Important 2026-06-01
+2026-10-02 18:25:15,099 - INFO - CVE-2026-43501: does not affect Red Hat software.
+2026-10-02 18:25:15,553 - ERROR - CVE-2026-45686: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:16,026 - ERROR - CVE-2026-45678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:16,476 - ERROR - CVE-2026-45682: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:16,946 - ERROR - CVE-2026-45685: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:17,615 - INFO - CVE-2026-45447 Important 2026-06-09
+2026-10-02 18:25:18,126 - INFO - CVE-2026-45784: does not affect Red Hat software.
+2026-10-02 18:25:18,375 - INFO - CVE-2026-45972: does not affect Red Hat software.
+2026-10-02 18:25:18,672 - INFO - CVE-2026-45984 Important 2026-05-27
+2026-10-02 18:25:19,141 - INFO - CVE-2026-45970 Moderate 2026-05-27
+2026-10-02 18:25:19,606 - INFO - CVE-2026-46120 Moderate 2026-05-28
+2026-10-02 18:25:20,086 - INFO - CVE-2026-46113 Moderate 2026-05-28
+2026-10-02 18:25:20,568 - INFO - CVE-2026-46173: does not affect Red Hat software.
+2026-10-02 18:25:21,006 - INFO - CVE-2026-46595: does not affect Red Hat software.
+2026-10-02 18:25:21,453 - INFO - CVE-2026-46243 Important 2026-05-26
+2026-10-02 18:25:21,939 - INFO - CVE-2026-46598 Moderate 2026-05-22
+2026-10-02 18:25:22,523 - INFO - CVE-2026-46227 Important 2026-05-28
+2026-10-02 18:25:22,981 - INFO - CVE-2026-48615 Moderate 2026-06-26
+2026-10-02 18:25:23,492 - INFO - CVE-2026-46597 Important 2026-05-22
+2026-10-02 18:25:23,955 - INFO - CVE-2026-48618 Important 2026-06-26
+2026-10-02 18:25:24,196 - INFO - CVE-2026-4775 Important 2026-03-24
+2026-10-02 18:25:24,732 - INFO - CVE-2026-48934 Moderate 2026-06-26
+2026-10-02 18:25:25,219 - INFO - CVE-2026-48928 Moderate 2026-06-26
+2026-10-02 18:25:25,728 - INFO - CVE-2026-48930 Moderate 2026-06-26
+2026-10-02 18:25:26,180 - INFO - CVE-2026-48978: does not affect Red Hat software.
+2026-10-02 18:25:26,667 - INFO - CVE-2026-48935 Low 2026-06-26
+2026-10-02 18:25:27,121 - INFO - CVE-2026-48619 Moderate 2026-06-26
+2026-10-02 18:25:27,627 - INFO - CVE-2026-48933 Important 2026-06-26
+2026-10-02 18:25:28,137 - INFO - CVE-2026-50031 Moderate 2026-06-03
+2026-10-02 18:25:28,502 - INFO - CVE-2026-52943: does not affect Red Hat software.
+2026-10-02 18:25:28,769 - INFO - CVE-2026-52909 Moderate 2026-06-19
+2026-10-02 18:25:29,263 - INFO - CVE-2026-49975 Important 2026-06-03
+2026-10-02 18:25:29,752 - INFO - CVE-2026-53266 Important 2026-06-01
+2026-10-02 18:25:30,215 - INFO - CVE-2026-54059 Important 2026-07-06
+2026-10-02 18:25:30,667 - INFO - CVE-2026-53359 Important 2026-07-04
+2026-10-02 18:25:31,166 - INFO - CVE-2026-54512 Important 2026-06-23
+2026-10-02 18:25:31,724 - INFO - CVE-2026-54060 Important 2026-07-06
+2026-10-02 18:25:32,459 - INFO - CVE-2026-53362: does not affect Red Hat software.
+2026-10-02 18:25:33,083 - INFO - CVE-2026-53166 Moderate 2026-06-25
+2026-10-02 18:25:33,647 - INFO - CVE-2026-5260 Moderate 2026-04-29
+2026-10-02 18:25:34,117 - ERROR - CVE-2026-50538: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:34,598 - INFO - CVE-2026-55379 Important 2026-07-06
+2026-10-02 18:25:35,091 - INFO - CVE-2026-55199: does not affect Red Hat software.
+2026-10-02 18:25:35,536 - INFO - CVE-2026-55380 Important 2026-07-06
+2026-10-02 18:25:36,047 - INFO - CVE-2026-55200: does not affect Red Hat software.
+2026-10-02 18:25:36,252 - INFO - CVE-2026-55999 Important 2026-07-08
+2026-10-02 18:25:36,696 - INFO - CVE-2026-56000 Important 2026-07-08
+2026-10-02 18:25:37,206 - INFO - CVE-2026-54513 Important 2026-06-23
+2026-10-02 18:25:37,683 - INFO - CVE-2026-56434 Moderate 2026-07-15
+2026-10-02 18:25:38,141 - INFO - CVE-2026-59083 Low 2026-07-14
+2026-10-02 18:25:38,580 - INFO - CVE-2026-59084 Low 2026-07-14
+2026-10-02 18:25:39,019 - INFO - CVE-2026-57231 Important 2026-06-26
+2026-10-02 18:25:39,504 - ERROR - CVE-2026-59762: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:40,113 - INFO - CVE-2026-6722 Important 2026-05-10
+2026-10-02 18:25:40,553 - INFO - CVE-2026-6733 Low 2026-06-17
+2026-10-02 18:25:41,019 - INFO - CVE-2026-60005 Important 2026-07-15
+2026-10-02 18:25:41,542 - ERROR - CVE-2026-6914: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:42,015 - ERROR - CVE-2026-8053: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:42,546 - INFO - CVE-2026-7261 Moderate 2026-05-10
+2026-10-02 18:25:42,998 - INFO - CVE-2026-6915: does not affect Red Hat software.
+2026-10-02 18:25:43,444 - INFO - CVE-2026-6734 Important 2026-06-17
+2026-10-02 18:25:43,905 - ERROR - CVE-2026-8200: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:44,367 - INFO - CVE-2026-8177 Important 2026-05-10
+2026-10-02 18:25:44,801 - ERROR - CVE-2026-8199: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:45,262 - ERROR - CVE-2026-8202: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:45,714 - ERROR - CVE-2026-8201: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:25:45,816 - INFO - CVE-2026-8286 Important 2026-07-03
+2026-10-02 18:25:46,097 - INFO - CVE-2026-8631 Important 2026-05-20
+2026-10-02 18:25:46,562 - INFO - CVE-2026-8376: does not affect Red Hat software.
+2026-10-02 18:25:47,047 - INFO - CVE-2026-8632 Important 2026-05-20
+2026-10-02 18:25:47,497 - INFO - CVE-2026-8924 Moderate 2026-07-03
+2026-10-02 18:25:47,611 - INFO - CVE-2026-8458 Important 2026-07-03
+2026-10-02 18:25:48,095 - INFO - CVE-2026-9080: does not affect Red Hat software.
+2026-10-02 18:25:48,263 - INFO - CVE-2026-8925: does not affect Red Hat software.
+2026-10-02 18:25:48,707 - INFO - CVE-2026-8926: does not affect Red Hat software.
+2026-10-02 18:25:49,199 - INFO - CVE-2026-9545: does not affect Red Hat software.
+2026-10-02 18:25:49,649 - INFO - CVE-2026-9547: does not affect Red Hat software.
+2026-10-02 18:25:50,126 - INFO - CVE-2026-9678 Moderate 2026-06-17
+2026-10-02 18:25:50,247 - INFO - CVE-2026-8927 Important 2026-07-03
+2026-10-02 18:25:50,686 - INFO - CVE-2026-9697 Important 2026-06-17
+2026-10-02 18:25:51,149 - INFO - CVE-2026-9079: does not affect Red Hat software.
+2026-10-02 18:25:51,589 - INFO - CVE-2026-9698 Important 2026-06-09
+2026-10-02 18:56:41,752 - INFO - Processing 261 CVEs from /home/ubuntu/redhat_security_fetcher/input/cves.d260721.txt
+2026-10-02 18:56:42,456 - INFO - CVE-2024-12224 Moderate 2025-05-30
+2026-10-02 18:56:42,908 - WARNING - CVE-2024-32650: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:56:43,117 - INFO - CVE-2024-12243 Moderate 2025-02-10
+2026-10-02 18:56:43,668 - INFO - CVE-2024-0553 Moderate 2024-01-16
+2026-10-02 18:56:44,121 - INFO - CVE-2024-58266 Low 2025-07-27
+2026-10-02 18:56:44,566 - INFO - CVE-2025-14179: does not affect Red Hat software.
+2026-10-02 18:56:45,062 - INFO - CVE-2025-15661: does not affect Red Hat software.
+2026-10-02 18:56:45,604 - INFO - CVE-2025-30204 Important 2025-03-21
+2026-10-02 18:56:45,810 - INFO - CVE-2025-47913 Important 2025-11-13
+2026-10-02 18:56:46,306 - INFO - CVE-2025-3416 Low 2025-04-04
+2026-10-02 18:56:46,753 - INFO - CVE-2025-58160 Low 2025-08-29
+2026-10-02 18:56:47,262 - WARNING - CVE-2023-26964: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:56:47,732 - WARNING - CVE-2024-43806: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:56:48,497 - INFO - CVE-2025-61729 Important 2025-12-02
+2026-10-02 18:56:48,987 - INFO - CVE-2025-68461: does not affect Red Hat software.
+2026-10-02 18:56:49,450 - INFO - CVE-2025-67030 Important 2026-03-25
+2026-10-02 18:56:49,723 - INFO - CVE-2025-61726 Important 2026-01-28
+2026-10-02 18:56:49,977 - INFO - CVE-2025-71066 Moderate 2026-01-13
+2026-10-02 18:56:50,239 - INFO - CVE-2025-14831 Moderate 2026-02-09
+2026-10-02 18:56:50,688 - INFO - CVE-2025-69725 Moderate 2026-02-19
+2026-10-02 18:56:51,143 - INFO - CVE-2026-10536: does not affect Red Hat software.
+2026-10-02 18:56:51,582 - INFO - CVE-2025-71089 Moderate 2026-01-13
+2026-10-02 18:56:52,208 - INFO - CVE-2026-11525 Low 2026-06-17
+2026-10-02 18:56:52,651 - INFO - CVE-2026-10722 Moderate 2026-06-03
+2026-10-02 18:56:53,117 - INFO - CVE-2025-9820 Low 2025-11-18
+2026-10-02 18:56:53,570 - INFO - CVE-2026-11526: does not affect Red Hat software.
+2026-10-02 18:56:54,025 - INFO - CVE-2026-12064: does not affect Red Hat software.
+2026-10-02 18:56:54,498 - INFO - CVE-2026-12151 Important 2026-06-17
+2026-10-02 18:56:54,942 - INFO - CVE-2026-12290 Important 2026-06-16
+2026-10-02 18:56:55,610 - INFO - CVE-2026-12291 Important 2026-06-16
+2026-10-02 18:56:56,092 - INFO - CVE-2026-12292 Important 2026-06-16
+2026-10-02 18:56:56,556 - INFO - CVE-2026-12294 Important 2026-06-16
+2026-10-02 18:56:56,774 - INFO - CVE-2026-12289 Important 2026-06-16
+2026-10-02 18:56:57,219 - INFO - CVE-2026-12296 Important 2026-06-16
+2026-10-02 18:56:57,750 - INFO - CVE-2026-12295 Important 2026-06-16
+2026-10-02 18:56:58,372 - INFO - CVE-2026-12298 Important 2026-06-16
+2026-10-02 18:56:58,827 - INFO - CVE-2026-12299 Important 2026-06-16
+2026-10-02 18:56:59,281 - INFO - CVE-2026-12297 Important 2026-06-16
+2026-10-02 18:56:59,782 - WARNING - CVE-2026-10842: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:00,279 - INFO - CVE-2026-10649 Important 2026-06-16
+2026-10-02 18:57:00,737 - INFO - CVE-2026-12305 Moderate 2026-06-16
+2026-10-02 18:57:01,246 - INFO - CVE-2026-12304 Moderate 2026-06-16
+2026-10-02 18:57:01,723 - INFO - CVE-2026-12302 Moderate 2026-06-16
+2026-10-02 18:57:02,183 - INFO - CVE-2026-12307 Moderate 2026-06-16
+2026-10-02 18:57:02,644 - INFO - CVE-2026-12309 Moderate 2026-06-16
+2026-10-02 18:57:03,115 - INFO - CVE-2026-12308 Moderate 2026-06-16
+2026-10-02 18:57:03,669 - INFO - CVE-2026-12306 Moderate 2026-06-16
+2026-10-02 18:57:04,187 - INFO - CVE-2026-12312 Moderate 2026-06-16
+2026-10-02 18:57:04,682 - INFO - CVE-2026-12311 Moderate 2026-06-16
+2026-10-02 18:57:05,140 - INFO - CVE-2026-12315 Moderate 2026-06-16
+2026-10-02 18:57:05,638 - INFO - CVE-2026-12314 Moderate 2026-06-16
+2026-10-02 18:57:06,094 - INFO - CVE-2026-12318: does not affect Red Hat software.
+2026-10-02 18:57:06,544 - INFO - CVE-2026-12313 Moderate 2026-06-16
+2026-10-02 18:57:06,999 - INFO - CVE-2026-12327 Moderate 2026-06-16
+2026-10-02 18:57:07,460 - INFO - CVE-2026-12324 Low 2026-06-16
+2026-10-02 18:57:07,965 - INFO - CVE-2026-12310 Moderate 2026-06-16
+2026-10-02 18:57:08,655 - INFO - CVE-2026-12330 Moderate 2026-06-16
+2026-10-02 18:57:09,163 - INFO - CVE-2026-12328 Important 2026-06-16
+2026-10-02 18:57:09,646 - INFO - CVE-2026-12329 Important 2026-06-16
+2026-10-02 18:57:10,169 - INFO - CVE-2026-12325 Low 2026-06-16
+2026-10-02 18:57:10,715 - INFO - CVE-2026-15308 Important 2026-07-09
+2026-10-02 18:57:11,194 - INFO - CVE-2026-20213: does not affect Red Hat software.
+2026-10-02 18:57:11,669 - INFO - CVE-2026-12725 Moderate 2026-04-21
+2026-10-02 18:57:12,128 - INFO - CVE-2026-20216: does not affect Red Hat software.
+2026-10-02 18:57:12,571 - INFO - CVE-2026-20215: does not affect Red Hat software.
+2026-10-02 18:57:13,122 - INFO - CVE-2026-20214: does not affect Red Hat software.
+2026-10-02 18:57:13,585 - INFO - CVE-2026-20243: does not affect Red Hat software.
+2026-10-02 18:57:14,044 - INFO - CVE-2026-12969: does not affect Red Hat software.
+2026-10-02 18:57:14,558 - WARNING - CVE-2026-20297: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:15,035 - INFO - CVE-2026-20217: does not affect Red Hat software.
+2026-10-02 18:57:15,490 - INFO - CVE-2026-20244: does not affect Red Hat software.
+2026-10-02 18:57:16,022 - INFO - CVE-2026-24051: does not affect Red Hat software.
+2026-10-02 18:57:16,479 - WARNING - CVE-2026-21892: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:16,987 - INFO - CVE-2026-25680: does not affect Red Hat software.
+2026-10-02 18:57:17,512 - INFO - CVE-2026-23393: does not affect Red Hat software.
+2026-10-02 18:57:17,756 - INFO - CVE-2026-25681 Important 2026-05-22
+2026-10-02 18:57:18,195 - INFO - CVE-2026-25727 Moderate 2026-02-06
+2026-10-02 18:57:18,400 - INFO - CVE-2026-25679 Important 2026-03-06
+2026-10-02 18:57:18,637 - INFO - CVE-2026-14544 Important 2026-07-03
+2026-10-02 18:57:18,907 - INFO - CVE-2026-12912 Important 2026-04-16
+2026-10-02 18:57:19,398 - INFO - CVE-2026-27143 Moderate 2026-04-08
+2026-10-02 18:57:19,862 - INFO - CVE-2026-27140 Important 2026-04-08
+2026-10-02 18:57:20,384 - INFO - CVE-2026-27144 Moderate 2026-04-08
+2026-10-02 18:57:20,917 - INFO - CVE-2026-27136 Important 2026-05-22
+2026-10-02 18:57:21,129 - INFO - CVE-2026-28390 Moderate 2026-04-07
+2026-10-02 18:57:21,599 - INFO - CVE-2026-29146 Important 2026-04-09
+2026-10-02 18:57:22,066 - INFO - CVE-2026-29181: does not affect Red Hat software.
+2026-10-02 18:57:22,530 - INFO - CVE-2026-27137 Important 2026-03-06
+2026-10-02 18:57:23,037 - INFO - CVE-2026-27145 Important 2026-06-02
+2026-10-02 18:57:23,504 - INFO - CVE-2026-31505 Moderate 2026-04-22
+2026-10-02 18:57:23,953 - INFO - CVE-2026-31402 Important 2026-04-03
+2026-10-02 18:57:24,444 - INFO - CVE-2026-31533 Moderate 2026-04-23
+2026-10-02 18:57:24,938 - INFO - CVE-2026-31570 Moderate 2026-04-24
+2026-10-02 18:57:25,389 - INFO - CVE-2026-31586 Moderate 2026-04-24
+2026-10-02 18:57:25,920 - INFO - CVE-2026-31607: does not affect Red Hat software.
+2026-10-02 18:57:26,455 - INFO - CVE-2026-31637 Moderate 2026-04-24
+2026-10-02 18:57:26,957 - INFO - CVE-2026-31669 Moderate 2026-04-24
+2026-10-02 18:57:27,391 - INFO - CVE-2026-31659: does not affect Red Hat software.
+2026-10-02 18:57:27,904 - INFO - CVE-2026-31685 Moderate 2026-04-25
+2026-10-02 18:57:28,098 - INFO - CVE-2026-31411 Moderate 2026-04-08
+2026-10-02 18:57:28,603 - INFO - CVE-2026-31718: does not affect Red Hat software.
+2026-10-02 18:57:28,809 - INFO - CVE-2026-31790: does not affect Red Hat software.
+2026-10-02 18:57:29,276 - INFO - CVE-2026-31758 Moderate 2026-05-01
+2026-10-02 18:57:29,739 - INFO - CVE-2026-32281 Moderate 2026-04-08
+2026-10-02 18:57:30,207 - INFO - CVE-2026-32282 Moderate 2026-04-08
+2026-10-02 18:57:30,465 - INFO - CVE-2026-32280 Important 2026-04-08
+2026-10-02 18:57:30,986 - INFO - CVE-2026-32285: does not affect Red Hat software.
+2026-10-02 18:57:31,449 - INFO - CVE-2026-32287: does not affect Red Hat software.
+2026-10-02 18:57:31,942 - INFO - CVE-2026-32283 Important 2026-04-08
+2026-10-02 18:57:32,417 - INFO - CVE-2026-33554 Moderate 2026-03-24
+2026-10-02 18:57:32,862 - INFO - CVE-2026-33532 Moderate 2026-03-26
+2026-10-02 18:57:33,327 - INFO - CVE-2026-33815: does not affect Red Hat software.
+2026-10-02 18:57:33,871 - INFO - CVE-2026-33811 Important 2026-05-07
+2026-10-02 18:57:34,111 - INFO - CVE-2026-33845 Important 2026-04-30
+2026-10-02 18:57:34,562 - INFO - CVE-2026-33810 Important 2026-04-08
+2026-10-02 18:57:35,051 - INFO - CVE-2026-33814 Important 2026-05-07
+2026-10-02 18:57:35,520 - INFO - CVE-2026-34486 Important 2026-04-09
+2026-10-02 18:57:35,761 - INFO - CVE-2026-34986 Important 2026-04-06
+2026-10-02 18:57:36,273 - INFO - CVE-2026-33846 Important 2026-05-04
+2026-10-02 18:57:36,755 - WARNING - CVE-2026-36849: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:37,236 - INFO - CVE-2026-39827: does not affect Red Hat software.
+2026-10-02 18:57:37,457 - INFO - CVE-2026-39822 Important 2026-07-08
+2026-10-02 18:57:37,952 - INFO - CVE-2026-3833 Moderate 2026-04-30
+2026-10-02 18:57:38,454 - INFO - CVE-2026-39821 Important 2026-05-22
+2026-10-02 18:57:38,973 - INFO - CVE-2026-39831 Important 2026-05-22
+2026-10-02 18:57:40,332 - INFO - CVE-2026-39829 Important 2026-05-22
+2026-10-02 18:57:40,589 - INFO - CVE-2026-39832 Important 2026-05-22
+2026-10-02 18:57:41,033 - INFO - CVE-2026-39830 Important 2026-05-22
+2026-10-02 18:57:41,496 - INFO - CVE-2026-39834: does not affect Red Hat software.
+2026-10-02 18:57:41,957 - INFO - CVE-2026-39828: does not affect Red Hat software.
+2026-10-02 18:57:42,612 - INFO - CVE-2026-39833 Moderate 2026-05-22
+2026-10-02 18:57:43,089 - INFO - CVE-2026-39836 Moderate 2026-05-07
+2026-10-02 18:57:43,537 - INFO - CVE-2026-39882: does not affect Red Hat software.
+2026-10-02 18:57:44,017 - INFO - CVE-2026-39883: does not affect Red Hat software.
+2026-10-02 18:57:44,530 - INFO - CVE-2026-40622 Moderate 2026-05-20
+2026-10-02 18:57:44,975 - WARNING - CVE-2026-41676: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:45,425 - INFO - CVE-2026-41401 Moderate 2026-05-26
+2026-10-02 18:57:45,914 - WARNING - CVE-2026-41677: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:46,406 - INFO - CVE-2026-41292 Important 2026-05-20
+2026-10-02 18:57:46,878 - INFO - CVE-2026-39835 Important 2026-05-22
+2026-10-02 18:57:47,340 - WARNING - CVE-2026-41681: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:47,825 - INFO - CVE-2026-41889 Moderate 2026-05-08
+2026-10-02 18:57:48,326 - WARNING - CVE-2026-41678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:48,794 - WARNING - CVE-2026-41898: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:57:49,327 - INFO - CVE-2026-41991 Moderate 2026-06-29
+2026-10-02 18:57:49,765 - INFO - CVE-2026-41992 Low 2026-06-29
+2026-10-02 18:57:50,226 - INFO - CVE-2026-4176 Moderate 2026-03-29
+2026-10-02 18:57:50,750 - INFO - CVE-2026-42327: does not affect Red Hat software.
+2026-10-02 18:57:51,208 - INFO - CVE-2026-42055 Important 2026-06-17
+2026-10-02 18:57:51,669 - INFO - CVE-2026-42338 Important 2026-05-12
+2026-10-02 18:57:52,122 - INFO - CVE-2026-42496 Important 2026-05-26
+2026-10-02 18:57:52,598 - INFO - CVE-2026-42501 Moderate 2026-05-07
+2026-10-02 18:57:53,062 - INFO - CVE-2026-42502 Moderate 2026-05-22
+2026-10-02 18:57:53,513 - INFO - CVE-2026-42533 Important 2026-07-15
+2026-10-02 18:57:54,034 - INFO - CVE-2026-42506 Moderate 2026-05-22
+2026-10-02 18:57:54,496 - INFO - CVE-2026-42534 Important 2026-05-20
+2026-10-02 18:57:54,995 - INFO - CVE-2026-43011: does not affect Red Hat software.
+2026-10-02 18:57:55,505 - INFO - CVE-2026-42508 Important 2026-05-22
+2026-10-02 18:57:55,966 - INFO - CVE-2026-42009 Important 2026-04-29
+2026-10-02 18:57:56,430 - INFO - CVE-2026-42010 Important 2026-04-29
+2026-10-02 18:57:56,922 - INFO - CVE-2026-43025 Moderate 2026-05-01
+2026-10-02 18:57:57,398 - INFO - CVE-2026-43038 Important 2026-05-01
+2026-10-02 18:57:57,861 - INFO - CVE-2026-43114: does not affect Red Hat software.
+2026-10-02 18:57:58,426 - INFO - CVE-2026-43120 Moderate 2026-05-06
+2026-10-02 18:57:58,885 - INFO - CVE-2026-43027 Moderate 2026-05-01
+2026-10-02 18:57:59,361 - INFO - CVE-2026-43125 Important 2026-05-06
+2026-10-02 18:57:59,939 - INFO - CVE-2026-43037 Critical 2026-05-01
+2026-10-02 18:58:00,421 - INFO - CVE-2026-43186: does not affect Red Hat software.
+2026-10-02 18:58:00,976 - INFO - CVE-2026-43190 Moderate 2026-05-06
+2026-10-02 18:58:01,656 - INFO - CVE-2026-43366: does not affect Red Hat software.
+2026-10-02 18:58:02,116 - INFO - CVE-2026-43384: does not affect Red Hat software.
+2026-10-02 18:58:02,555 - INFO - CVE-2026-43499 Important 2026-05-21
+2026-10-02 18:58:03,043 - INFO - CVE-2026-43437 Moderate 2026-05-08
+2026-10-02 18:58:03,509 - INFO - CVE-2026-43500: does not affect Red Hat software.
+2026-10-02 18:58:04,017 - INFO - CVE-2026-43494: does not affect Red Hat software.
+2026-10-02 18:58:04,548 - INFO - CVE-2026-44390 Important 2026-05-20
+2026-10-02 18:58:04,759 - INFO - CVE-2026-45186 Important 2026-05-10
+2026-10-02 18:58:05,248 - WARNING - CVE-2026-44662: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:05,763 - INFO - CVE-2026-44740 Important 2026-06-01
+2026-10-02 18:58:06,256 - INFO - CVE-2026-43501: does not affect Red Hat software.
+2026-10-02 18:58:06,687 - WARNING - CVE-2026-45686: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:07,169 - WARNING - CVE-2026-45678: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:07,630 - WARNING - CVE-2026-45682: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:08,100 - WARNING - CVE-2026-45685: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:08,574 - INFO - CVE-2026-45447 Important 2026-06-09
+2026-10-02 18:58:09,064 - INFO - CVE-2026-45784: does not affect Red Hat software.
+2026-10-02 18:58:09,524 - INFO - CVE-2026-45972: does not affect Red Hat software.
+2026-10-02 18:58:10,020 - INFO - CVE-2026-45984 Important 2026-05-27
+2026-10-02 18:58:10,495 - INFO - CVE-2026-45970 Moderate 2026-05-27
+2026-10-02 18:58:10,938 - INFO - CVE-2026-46120 Moderate 2026-05-28
+2026-10-02 18:58:11,464 - INFO - CVE-2026-46113 Moderate 2026-05-28
+2026-10-02 18:58:11,921 - INFO - CVE-2026-46173: does not affect Red Hat software.
+2026-10-02 18:58:12,388 - INFO - CVE-2026-46595: does not affect Red Hat software.
+2026-10-02 18:58:12,857 - INFO - CVE-2026-46243 Important 2026-05-26
+2026-10-02 18:58:13,322 - INFO - CVE-2026-46598 Moderate 2026-05-22
+2026-10-02 18:58:13,766 - INFO - CVE-2026-46227 Important 2026-05-28
+2026-10-02 18:58:14,311 - INFO - CVE-2026-48615 Moderate 2026-06-26
+2026-10-02 18:58:14,838 - INFO - CVE-2026-46597 Important 2026-05-22
+2026-10-02 18:58:15,314 - INFO - CVE-2026-48618 Important 2026-06-26
+2026-10-02 18:58:15,511 - INFO - CVE-2026-4775 Important 2026-03-24
+2026-10-02 18:58:15,970 - INFO - CVE-2026-48934 Moderate 2026-06-26
+2026-10-02 18:58:16,482 - INFO - CVE-2026-48928 Moderate 2026-06-26
+2026-10-02 18:58:16,956 - INFO - CVE-2026-48930 Moderate 2026-06-26
+2026-10-02 18:58:17,427 - INFO - CVE-2026-48978: does not affect Red Hat software.
+2026-10-02 18:58:17,879 - INFO - CVE-2026-48935 Low 2026-06-26
+2026-10-02 18:58:18,344 - INFO - CVE-2026-48619 Moderate 2026-06-26
+2026-10-02 18:58:18,818 - INFO - CVE-2026-48933 Important 2026-06-26
+2026-10-02 18:58:19,296 - INFO - CVE-2026-50031 Moderate 2026-06-03
+2026-10-02 18:58:19,773 - INFO - CVE-2026-52943: does not affect Red Hat software.
+2026-10-02 18:58:20,275 - INFO - CVE-2026-52909 Moderate 2026-06-19
+2026-10-02 18:58:20,754 - INFO - CVE-2026-49975 Important 2026-06-03
+2026-10-02 18:58:21,222 - INFO - CVE-2026-53266 Important 2026-06-01
+2026-10-02 18:58:21,695 - INFO - CVE-2026-54059 Important 2026-07-06
+2026-10-02 18:58:22,154 - INFO - CVE-2026-53359 Important 2026-07-04
+2026-10-02 18:58:22,698 - INFO - CVE-2026-54512 Important 2026-06-23
+2026-10-02 18:58:23,209 - INFO - CVE-2026-54060 Important 2026-07-06
+2026-10-02 18:58:23,730 - INFO - CVE-2026-53362: does not affect Red Hat software.
+2026-10-02 18:58:24,327 - INFO - CVE-2026-53166 Moderate 2026-06-25
+2026-10-02 18:58:24,941 - INFO - CVE-2026-5260 Moderate 2026-04-29
+2026-10-02 18:58:25,402 - WARNING - CVE-2026-50538: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:25,895 - INFO - CVE-2026-55379 Important 2026-07-06
+2026-10-02 18:58:26,353 - INFO - CVE-2026-55199: does not affect Red Hat software.
+2026-10-02 18:58:26,821 - INFO - CVE-2026-55380 Important 2026-07-06
+2026-10-02 18:58:27,309 - INFO - CVE-2026-55200: does not affect Red Hat software.
+2026-10-02 18:58:27,627 - INFO - CVE-2026-55999 Important 2026-07-08
+2026-10-02 18:58:28,458 - INFO - CVE-2026-56000 Important 2026-07-08
+2026-10-02 18:58:28,933 - INFO - CVE-2026-54513 Important 2026-06-23
+2026-10-02 18:58:29,459 - INFO - CVE-2026-56434 Moderate 2026-07-15
+2026-10-02 18:58:29,916 - INFO - CVE-2026-59083 Low 2026-07-14
+2026-10-02 18:58:30,352 - INFO - CVE-2026-59084 Low 2026-07-14
+2026-10-02 18:58:30,828 - INFO - CVE-2026-57231 Important 2026-06-26
+2026-10-02 18:58:31,369 - WARNING - CVE-2026-59762: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:31,843 - INFO - CVE-2026-6722 Important 2026-05-10
+2026-10-02 18:58:32,296 - INFO - CVE-2026-6733 Low 2026-06-17
+2026-10-02 18:58:32,769 - INFO - CVE-2026-60005 Important 2026-07-15
+2026-10-02 18:58:33,215 - WARNING - CVE-2026-6914: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:33,714 - WARNING - CVE-2026-8053: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:34,268 - INFO - CVE-2026-7261 Moderate 2026-05-10
+2026-10-02 18:58:34,710 - INFO - CVE-2026-6915: does not affect Red Hat software.
+2026-10-02 18:58:35,209 - INFO - CVE-2026-6734 Important 2026-06-17
+2026-10-02 18:58:35,658 - WARNING - CVE-2026-8200: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:36,114 - INFO - CVE-2026-8177 Important 2026-05-10
+2026-10-02 18:58:36,572 - WARNING - CVE-2026-8199: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:37,014 - WARNING - CVE-2026-8202: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:37,458 - WARNING - CVE-2026-8201: DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 18:58:37,916 - INFO - CVE-2026-8286 Important 2026-07-03
+2026-10-02 18:58:38,111 - INFO - CVE-2026-8631 Important 2026-05-20
+2026-10-02 18:58:38,604 - INFO - CVE-2026-8376: does not affect Red Hat software.
+2026-10-02 18:58:39,062 - INFO - CVE-2026-8632 Important 2026-05-20
+2026-10-02 18:58:39,517 - INFO - CVE-2026-8924 Moderate 2026-07-03
+2026-10-02 18:58:39,986 - INFO - CVE-2026-8458 Important 2026-07-03
+2026-10-02 18:58:40,462 - INFO - CVE-2026-9080: does not affect Red Hat software.
+2026-10-02 18:58:41,013 - INFO - CVE-2026-8925: does not affect Red Hat software.
+2026-10-02 18:58:41,607 - INFO - CVE-2026-8926: does not affect Red Hat software.
+2026-10-02 18:58:42,118 - INFO - CVE-2026-9545: does not affect Red Hat software.
+2026-10-02 18:58:42,755 - INFO - CVE-2026-9547: does not affect Red Hat software.
+2026-10-02 18:58:43,330 - INFO - CVE-2026-9678 Moderate 2026-06-17
+2026-10-02 18:58:43,833 - INFO - CVE-2026-8927 Important 2026-07-03
+2026-10-02 18:58:44,341 - INFO - CVE-2026-9697 Important 2026-06-17
+2026-10-02 18:58:44,875 - INFO - CVE-2026-9079: does not affect Red Hat software.
+2026-10-02 18:58:45,362 - INFO - CVE-2026-9698 Important 2026-06-09
+2026-10-02 19:06:16,226 - INFO - Processing 261 CVEs from /home/ubuntu/redhat_security_fetcher/input/cves.d260721.txt
+2026-10-02 19:06:16,551 - INFO - CVE-2024-12224 (1/261) Moderate 2025-05-30
+2026-10-02 19:06:17,065 - WARNING - CVE-2024-32650 (2/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:17,278 - INFO - CVE-2024-12243 (3/261) Moderate 2025-02-10
+2026-10-02 19:06:17,470 - INFO - CVE-2024-0553 (4/261) Moderate 2024-01-16
+2026-10-02 19:06:17,627 - INFO - CVE-2024-58266 (5/261) Low 2025-07-27
+2026-10-02 19:06:17,753 - INFO - CVE-2025-14179 (6/261): does not affect Red Hat software.
+2026-10-02 19:06:17,880 - INFO - CVE-2025-15661 (7/261): does not affect Red Hat software.
+2026-10-02 19:06:18,016 - INFO - CVE-2025-30204 (8/261) Important 2025-03-21
+2026-10-02 19:06:18,231 - INFO - CVE-2025-47913 (9/261) Important 2025-11-13
+2026-10-02 19:06:18,361 - INFO - CVE-2025-3416 (10/261) Low 2025-04-04
+2026-10-02 19:06:18,474 - INFO - CVE-2025-58160 (11/261) Low 2025-08-29
+2026-10-02 19:06:18,956 - WARNING - CVE-2023-26964 (12/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:19,468 - WARNING - CVE-2024-43806 (13/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:19,737 - INFO - CVE-2025-61729 (14/261) Important 2025-12-02
+2026-10-02 19:06:20,088 - INFO - CVE-2025-68461 (15/261): does not affect Red Hat software.
+2026-10-02 19:06:20,278 - INFO - CVE-2025-67030 (16/261) Important 2026-03-25
+2026-10-02 19:06:20,536 - INFO - CVE-2025-61726 (17/261) Important 2026-01-28
+2026-10-02 19:06:20,777 - INFO - CVE-2025-71066 (18/261) Moderate 2026-01-13
+2026-10-02 19:06:21,078 - INFO - CVE-2025-14831 (19/261) Moderate 2026-02-09
+2026-10-02 19:06:21,286 - INFO - CVE-2025-69725 (20/261) Moderate 2026-02-19
+2026-10-02 19:06:21,411 - INFO - CVE-2026-10536 (21/261): does not affect Red Hat software.
+2026-10-02 19:06:21,550 - INFO - CVE-2025-71089 (22/261) Moderate 2026-01-13
+2026-10-02 19:06:21,661 - INFO - CVE-2026-11525 (23/261) Low 2026-06-17
+2026-10-02 19:06:21,781 - INFO - CVE-2026-10722 (24/261) Moderate 2026-06-03
+2026-10-02 19:06:22,045 - INFO - CVE-2025-9820 (25/261) Low 2025-11-18
+2026-10-02 19:06:22,184 - INFO - CVE-2026-11526 (26/261): does not affect Red Hat software.
+2026-10-02 19:06:22,333 - INFO - CVE-2026-12064 (27/261): does not affect Red Hat software.
+2026-10-02 19:06:22,473 - INFO - CVE-2026-12151 (28/261) Important 2026-06-17
+2026-10-02 19:06:22,595 - INFO - CVE-2026-12290 (29/261) Important 2026-06-16
+2026-10-02 19:06:22,724 - INFO - CVE-2026-12291 (30/261) Important 2026-06-16
+2026-10-02 19:06:22,855 - INFO - CVE-2026-12292 (31/261) Important 2026-06-16
+2026-10-02 19:06:22,991 - INFO - CVE-2026-12294 (32/261) Important 2026-06-16
+2026-10-02 19:06:23,206 - INFO - CVE-2026-12289 (33/261) Important 2026-06-16
+2026-10-02 19:06:23,335 - INFO - CVE-2026-12296 (34/261) Important 2026-06-16
+2026-10-02 19:06:23,466 - INFO - CVE-2026-12295 (35/261) Important 2026-06-16
+2026-10-02 19:06:23,603 - INFO - CVE-2026-12298 (36/261) Important 2026-06-16
+2026-10-02 19:06:23,724 - INFO - CVE-2026-12299 (37/261) Important 2026-06-16
+2026-10-02 19:06:23,843 - INFO - CVE-2026-12297 (38/261) Important 2026-06-16
+2026-10-02 19:06:24,392 - WARNING - CVE-2026-10842 (39/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:24,530 - INFO - CVE-2026-10649 (40/261) Important 2026-06-16
+2026-10-02 19:06:24,699 - INFO - CVE-2026-12305 (41/261) Moderate 2026-06-16
+2026-10-02 19:06:24,905 - INFO - CVE-2026-12304 (42/261) Moderate 2026-06-16
+2026-10-02 19:06:25,010 - INFO - CVE-2026-12302 (43/261) Moderate 2026-06-16
+2026-10-02 19:06:25,166 - INFO - CVE-2026-12307 (44/261) Moderate 2026-06-16
+2026-10-02 19:06:25,396 - INFO - CVE-2026-12309 (45/261) Moderate 2026-06-16
+2026-10-02 19:06:25,556 - INFO - CVE-2026-12308 (46/261) Moderate 2026-06-16
+2026-10-02 19:06:25,688 - INFO - CVE-2026-12306 (47/261) Moderate 2026-06-16
+2026-10-02 19:06:25,792 - INFO - CVE-2026-12312 (48/261) Moderate 2026-06-16
+2026-10-02 19:06:25,978 - INFO - CVE-2026-12311 (49/261) Moderate 2026-06-16
+2026-10-02 19:06:26,292 - INFO - CVE-2026-12315 (50/261) Moderate 2026-06-16
+2026-10-02 19:06:26,408 - INFO - CVE-2026-12314 (51/261) Moderate 2026-06-16
+2026-10-02 19:06:26,532 - INFO - CVE-2026-12318 (52/261): does not affect Red Hat software.
+2026-10-02 19:06:26,654 - INFO - CVE-2026-12313 (53/261) Moderate 2026-06-16
+2026-10-02 19:06:26,778 - INFO - CVE-2026-12327 (54/261) Moderate 2026-06-16
+2026-10-02 19:06:27,124 - INFO - CVE-2026-12324 (55/261) Low 2026-06-16
+2026-10-02 19:06:27,270 - INFO - CVE-2026-12310 (56/261) Moderate 2026-06-16
+2026-10-02 19:06:27,376 - INFO - CVE-2026-12330 (57/261) Moderate 2026-06-16
+2026-10-02 19:06:27,514 - INFO - CVE-2026-12328 (58/261) Important 2026-06-16
+2026-10-02 19:06:27,656 - INFO - CVE-2026-12329 (59/261) Important 2026-06-16
+2026-10-02 19:06:27,830 - INFO - CVE-2026-12325 (60/261) Low 2026-06-16
+2026-10-02 19:06:27,980 - INFO - CVE-2026-15308 (61/261) Important 2026-07-09
+2026-10-02 19:06:28,114 - INFO - CVE-2026-20213 (62/261): does not affect Red Hat software.
+2026-10-02 19:06:28,230 - INFO - CVE-2026-12725 (63/261) Moderate 2026-04-21
+2026-10-02 19:06:28,442 - INFO - CVE-2026-20216 (64/261): does not affect Red Hat software.
+2026-10-02 19:06:28,678 - INFO - CVE-2026-20215 (65/261): does not affect Red Hat software.
+2026-10-02 19:06:28,857 - INFO - CVE-2026-20214 (66/261): does not affect Red Hat software.
+2026-10-02 19:06:28,989 - INFO - CVE-2026-20243 (67/261): does not affect Red Hat software.
+2026-10-02 19:06:29,161 - INFO - CVE-2026-12969 (68/261): does not affect Red Hat software.
+2026-10-02 19:06:29,623 - WARNING - CVE-2026-20297 (69/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:29,752 - INFO - CVE-2026-20217 (70/261): does not affect Red Hat software.
+2026-10-02 19:06:29,871 - INFO - CVE-2026-20244 (71/261): does not affect Red Hat software.
+2026-10-02 19:06:30,018 - INFO - CVE-2026-24051 (72/261): does not affect Red Hat software.
+2026-10-02 19:06:30,465 - WARNING - CVE-2026-21892 (73/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:30,813 - INFO - CVE-2026-25680 (74/261): does not affect Red Hat software.
+2026-10-02 19:06:31,000 - INFO - CVE-2026-23393 (75/261): does not affect Red Hat software.
+2026-10-02 19:06:31,295 - INFO - CVE-2026-25681 (76/261) Important 2026-05-22
+2026-10-02 19:06:31,412 - INFO - CVE-2026-25727 (77/261) Moderate 2026-02-06
+2026-10-02 19:06:31,649 - INFO - CVE-2026-25679 (78/261) Important 2026-03-06
+2026-10-02 19:06:31,891 - INFO - CVE-2026-14544 (79/261) Important 2026-07-03
+2026-10-02 19:06:32,032 - INFO - CVE-2026-12912 (80/261) Important 2026-04-16
+2026-10-02 19:06:32,255 - INFO - CVE-2026-27143 (81/261) Moderate 2026-04-08
+2026-10-02 19:06:32,441 - INFO - CVE-2026-27140 (82/261) Important 2026-04-08
+2026-10-02 19:06:32,597 - INFO - CVE-2026-27144 (83/261) Moderate 2026-04-08
+2026-10-02 19:06:32,811 - INFO - CVE-2026-27136 (84/261) Important 2026-05-22
+2026-10-02 19:06:33,033 - INFO - CVE-2026-28390 (85/261) Moderate 2026-04-07
+2026-10-02 19:06:33,223 - INFO - CVE-2026-29146 (86/261) Important 2026-04-09
+2026-10-02 19:06:33,477 - INFO - CVE-2026-29181 (87/261): does not affect Red Hat software.
+2026-10-02 19:06:33,611 - INFO - CVE-2026-27137 (88/261) Important 2026-03-06
+2026-10-02 19:06:33,760 - INFO - CVE-2026-27145 (89/261) Important 2026-06-02
+2026-10-02 19:06:33,963 - INFO - CVE-2026-31505 (90/261) Moderate 2026-04-22
+2026-10-02 19:06:34,081 - INFO - CVE-2026-31402 (91/261) Important 2026-04-03
+2026-10-02 19:06:34,353 - INFO - CVE-2026-31533 (92/261) Moderate 2026-04-23
+2026-10-02 19:06:34,561 - INFO - CVE-2026-31570 (93/261) Moderate 2026-04-24
+2026-10-02 19:06:34,706 - INFO - CVE-2026-31586 (94/261) Moderate 2026-04-24
+2026-10-02 19:06:34,833 - INFO - CVE-2026-31607 (95/261): does not affect Red Hat software.
+2026-10-02 19:06:34,992 - INFO - CVE-2026-31637 (96/261) Moderate 2026-04-24
+2026-10-02 19:06:35,122 - INFO - CVE-2026-31669 (97/261) Moderate 2026-04-24
+2026-10-02 19:06:35,245 - INFO - CVE-2026-31659 (98/261): does not affect Red Hat software.
+2026-10-02 19:06:35,398 - INFO - CVE-2026-31685 (99/261) Moderate 2026-04-25
+2026-10-02 19:06:35,605 - INFO - CVE-2026-31411 (100/261) Moderate 2026-04-08
+2026-10-02 19:06:35,823 - INFO - CVE-2026-31718 (101/261): does not affect Red Hat software.
+2026-10-02 19:06:36,115 - INFO - CVE-2026-31790 (102/261): does not affect Red Hat software.
+2026-10-02 19:06:36,489 - INFO - CVE-2026-31758 (103/261) Moderate 2026-05-01
+2026-10-02 19:06:36,654 - INFO - CVE-2026-32281 (104/261) Moderate 2026-04-08
+2026-10-02 19:06:36,834 - INFO - CVE-2026-32282 (105/261) Moderate 2026-04-08
+2026-10-02 19:06:37,049 - INFO - CVE-2026-32280 (106/261) Important 2026-04-08
+2026-10-02 19:06:37,184 - INFO - CVE-2026-32285 (107/261): does not affect Red Hat software.
+2026-10-02 19:06:37,287 - INFO - CVE-2026-32287 (108/261): does not affect Red Hat software.
+2026-10-02 19:06:37,483 - INFO - CVE-2026-32283 (109/261) Important 2026-04-08
+2026-10-02 19:06:37,592 - INFO - CVE-2026-33554 (110/261) Moderate 2026-03-24
+2026-10-02 19:06:37,761 - INFO - CVE-2026-33532 (111/261) Moderate 2026-03-26
+2026-10-02 19:06:37,863 - INFO - CVE-2026-33815 (112/261): does not affect Red Hat software.
+2026-10-02 19:06:38,018 - INFO - CVE-2026-33811 (113/261) Important 2026-05-07
+2026-10-02 19:06:38,205 - INFO - CVE-2026-33845 (114/261) Important 2026-04-30
+2026-10-02 19:06:38,329 - INFO - CVE-2026-33810 (115/261) Important 2026-04-08
+2026-10-02 19:06:38,467 - INFO - CVE-2026-33814 (116/261) Important 2026-05-07
+2026-10-02 19:06:38,765 - INFO - CVE-2026-34486 (117/261) Important 2026-04-09
+2026-10-02 19:06:39,231 - INFO - CVE-2026-34986 (118/261) Important 2026-04-06
+2026-10-02 19:06:39,365 - INFO - CVE-2026-33846 (119/261) Important 2026-05-04
+2026-10-02 19:06:39,818 - WARNING - CVE-2026-36849 (120/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:39,960 - INFO - CVE-2026-39827 (121/261): does not affect Red Hat software.
+2026-10-02 19:06:40,176 - INFO - CVE-2026-39822 (122/261) Important 2026-07-08
+2026-10-02 19:06:40,320 - INFO - CVE-2026-3833 (123/261) Moderate 2026-04-30
+2026-10-02 19:06:40,488 - INFO - CVE-2026-39821 (124/261) Important 2026-05-22
+2026-10-02 19:06:40,598 - INFO - CVE-2026-39831 (125/261) Important 2026-05-22
+2026-10-02 19:06:40,736 - INFO - CVE-2026-39829 (126/261) Important 2026-05-22
+2026-10-02 19:06:40,993 - INFO - CVE-2026-39832 (127/261) Important 2026-05-22
+2026-10-02 19:06:41,129 - INFO - CVE-2026-39830 (128/261) Important 2026-05-22
+2026-10-02 19:06:41,263 - INFO - CVE-2026-39834 (129/261): does not affect Red Hat software.
+2026-10-02 19:06:41,433 - INFO - CVE-2026-39828 (130/261): does not affect Red Hat software.
+2026-10-02 19:06:41,543 - INFO - CVE-2026-39833 (131/261) Moderate 2026-05-22
+2026-10-02 19:06:41,668 - INFO - CVE-2026-39836 (132/261) Moderate 2026-05-07
+2026-10-02 19:06:41,798 - INFO - CVE-2026-39882 (133/261): does not affect Red Hat software.
+2026-10-02 19:06:41,903 - INFO - CVE-2026-39883 (134/261): does not affect Red Hat software.
+2026-10-02 19:06:42,048 - INFO - CVE-2026-40622 (135/261) Moderate 2026-05-20
+2026-10-02 19:06:42,547 - WARNING - CVE-2026-41676 (136/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:42,678 - INFO - CVE-2026-41401 (137/261) Moderate 2026-05-26
+2026-10-02 19:06:43,122 - WARNING - CVE-2026-41677 (138/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:43,367 - INFO - CVE-2026-41292 (139/261) Important 2026-05-20
+2026-10-02 19:06:43,549 - INFO - CVE-2026-39835 (140/261) Important 2026-05-22
+2026-10-02 19:06:44,055 - WARNING - CVE-2026-41681 (141/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:44,169 - INFO - CVE-2026-41889 (142/261) Moderate 2026-05-08
+2026-10-02 19:06:44,665 - WARNING - CVE-2026-41678 (143/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:45,146 - WARNING - CVE-2026-41898 (144/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:45,308 - INFO - CVE-2026-41991 (145/261) Moderate 2026-06-29
+2026-10-02 19:06:45,454 - INFO - CVE-2026-41992 (146/261) Low 2026-06-29
+2026-10-02 19:06:45,674 - INFO - CVE-2026-4176 (147/261) Moderate 2026-03-29
+2026-10-02 19:06:45,811 - INFO - CVE-2026-42327 (148/261): does not affect Red Hat software.
+2026-10-02 19:06:45,931 - INFO - CVE-2026-42055 (149/261) Important 2026-06-17
+2026-10-02 19:06:46,073 - INFO - CVE-2026-42338 (150/261) Important 2026-05-12
+2026-10-02 19:06:46,201 - INFO - CVE-2026-42496 (151/261) Important 2026-05-26
+2026-10-02 19:06:46,315 - INFO - CVE-2026-42501 (152/261) Moderate 2026-05-07
+2026-10-02 19:06:46,469 - INFO - CVE-2026-42502 (153/261) Moderate 2026-05-22
+2026-10-02 19:06:46,772 - INFO - CVE-2026-42533 (154/261) Important 2026-07-15
+2026-10-02 19:06:46,902 - INFO - CVE-2026-42506 (155/261) Moderate 2026-05-22
+2026-10-02 19:06:47,018 - INFO - CVE-2026-42534 (156/261) Important 2026-05-20
+2026-10-02 19:06:47,148 - INFO - CVE-2026-43011 (157/261): does not affect Red Hat software.
+2026-10-02 19:06:47,277 - INFO - CVE-2026-42508 (158/261) Important 2026-05-22
+2026-10-02 19:06:47,443 - INFO - CVE-2026-42009 (159/261) Important 2026-04-29
+2026-10-02 19:06:47,565 - INFO - CVE-2026-42010 (160/261) Important 2026-04-29
+2026-10-02 19:06:47,721 - INFO - CVE-2026-43025 (161/261) Moderate 2026-05-01
+2026-10-02 19:06:47,854 - INFO - CVE-2026-43038 (162/261) Important 2026-05-01
+2026-10-02 19:06:47,989 - INFO - CVE-2026-43114 (163/261): does not affect Red Hat software.
+2026-10-02 19:06:48,118 - INFO - CVE-2026-43120 (164/261) Moderate 2026-05-06
+2026-10-02 19:06:48,225 - INFO - CVE-2026-43027 (165/261) Moderate 2026-05-01
+2026-10-02 19:06:48,570 - INFO - CVE-2026-43125 (166/261) Important 2026-05-06
+2026-10-02 19:06:48,789 - INFO - CVE-2026-43037 (167/261) Critical 2026-05-01
+2026-10-02 19:06:48,905 - INFO - CVE-2026-43186 (168/261): does not affect Red Hat software.
+2026-10-02 19:06:49,130 - INFO - CVE-2026-43190 (169/261) Moderate 2026-05-06
+2026-10-02 19:06:49,253 - INFO - CVE-2026-43366 (170/261): does not affect Red Hat software.
+2026-10-02 19:06:49,592 - INFO - CVE-2026-43384 (171/261): does not affect Red Hat software.
+2026-10-02 19:06:49,732 - INFO - CVE-2026-43499 (172/261) Important 2026-05-21
+2026-10-02 19:06:49,847 - INFO - CVE-2026-43437 (173/261) Moderate 2026-05-08
+2026-10-02 19:06:49,954 - INFO - CVE-2026-43500 (174/261): does not affect Red Hat software.
+2026-10-02 19:06:50,151 - INFO - CVE-2026-43494 (175/261): does not affect Red Hat software.
+2026-10-02 19:06:50,259 - INFO - CVE-2026-44390 (176/261) Important 2026-05-20
+2026-10-02 19:06:50,605 - INFO - CVE-2026-45186 (177/261) Important 2026-05-10
+2026-10-02 19:06:51,075 - WARNING - CVE-2026-44662 (178/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:51,274 - INFO - CVE-2026-44740 (179/261) Important 2026-06-01
+2026-10-02 19:06:51,401 - INFO - CVE-2026-43501 (180/261): does not affect Red Hat software.
+2026-10-02 19:06:51,904 - WARNING - CVE-2026-45686 (181/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:52,339 - WARNING - CVE-2026-45678 (182/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:52,809 - WARNING - CVE-2026-45682 (183/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:53,274 - WARNING - CVE-2026-45685 (184/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:06:53,386 - INFO - CVE-2026-45447 (185/261) Important 2026-06-09
+2026-10-02 19:06:53,488 - INFO - CVE-2026-45784 (186/261): does not affect Red Hat software.
+2026-10-02 19:06:53,601 - INFO - CVE-2026-45972 (187/261): does not affect Red Hat software.
+2026-10-02 19:06:54,013 - INFO - CVE-2026-45984 (188/261) Important 2026-05-27
+2026-10-02 19:06:54,142 - INFO - CVE-2026-45970 (189/261) Moderate 2026-05-27
+2026-10-02 19:06:54,263 - INFO - CVE-2026-46120 (190/261) Moderate 2026-05-28
+2026-10-02 19:06:54,478 - INFO - CVE-2026-46113 (191/261) Moderate 2026-05-28
+2026-10-02 19:06:54,583 - INFO - CVE-2026-46173 (192/261): does not affect Red Hat software.
+2026-10-02 19:06:54,704 - INFO - CVE-2026-46595 (193/261): does not affect Red Hat software.
+2026-10-02 19:06:54,844 - INFO - CVE-2026-46243 (194/261) Important 2026-05-26
+2026-10-02 19:06:54,980 - INFO - CVE-2026-46598 (195/261) Moderate 2026-05-22
+2026-10-02 19:06:55,115 - INFO - CVE-2026-46227 (196/261) Important 2026-05-28
+2026-10-02 19:06:55,262 - INFO - CVE-2026-48615 (197/261) Moderate 2026-06-26
+2026-10-02 19:06:55,483 - INFO - CVE-2026-46597 (198/261) Important 2026-05-22
+2026-10-02 19:06:55,676 - INFO - CVE-2026-48618 (199/261) Important 2026-06-26
+2026-10-02 19:06:55,875 - INFO - CVE-2026-4775 (200/261) Important 2026-03-24
+2026-10-02 19:06:55,989 - INFO - CVE-2026-48934 (201/261) Moderate 2026-06-26
+2026-10-02 19:06:56,128 - INFO - CVE-2026-48928 (202/261) Moderate 2026-06-26
+2026-10-02 19:06:56,268 - INFO - CVE-2026-48930 (203/261) Moderate 2026-06-26
+2026-10-02 19:06:56,622 - INFO - CVE-2026-48978 (204/261): does not affect Red Hat software.
+2026-10-02 19:06:56,792 - INFO - CVE-2026-48935 (205/261) Low 2026-06-26
+2026-10-02 19:06:57,026 - INFO - CVE-2026-48619 (206/261) Moderate 2026-06-26
+2026-10-02 19:06:57,138 - INFO - CVE-2026-48933 (207/261) Important 2026-06-26
+2026-10-02 19:06:57,262 - INFO - CVE-2026-50031 (208/261) Moderate 2026-06-03
+2026-10-02 19:06:57,503 - INFO - CVE-2026-52943 (209/261): does not affect Red Hat software.
+2026-10-02 19:06:57,716 - INFO - CVE-2026-52909 (210/261) Moderate 2026-06-19
+2026-10-02 19:06:58,056 - INFO - CVE-2026-49975 (211/261) Important 2026-06-03
+2026-10-02 19:06:58,179 - INFO - CVE-2026-53266 (212/261) Important 2026-06-01
+2026-10-02 19:06:58,363 - INFO - CVE-2026-54059 (213/261) Important 2026-07-06
+2026-10-02 19:06:58,681 - INFO - CVE-2026-53359 (214/261) Important 2026-07-04
+2026-10-02 19:06:58,927 - INFO - CVE-2026-54512 (215/261) Important 2026-06-23
+2026-10-02 19:06:59,119 - INFO - CVE-2026-54060 (216/261) Important 2026-07-06
+2026-10-02 19:06:59,386 - INFO - CVE-2026-53362 (217/261): does not affect Red Hat software.
+2026-10-02 19:06:59,622 - INFO - CVE-2026-53166 (218/261) Moderate 2026-06-25
+2026-10-02 19:06:59,869 - INFO - CVE-2026-5260 (219/261) Moderate 2026-04-29
+2026-10-02 19:07:00,327 - WARNING - CVE-2026-50538 (220/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:00,486 - INFO - CVE-2026-55379 (221/261) Important 2026-07-06
+2026-10-02 19:07:00,745 - INFO - CVE-2026-55199 (222/261): does not affect Red Hat software.
+2026-10-02 19:07:00,949 - INFO - CVE-2026-55380 (223/261) Important 2026-07-06
+2026-10-02 19:07:01,106 - INFO - CVE-2026-55200 (224/261): does not affect Red Hat software.
+2026-10-02 19:07:01,363 - INFO - CVE-2026-55999 (225/261) Important 2026-07-08
+2026-10-02 19:07:01,833 - INFO - CVE-2026-56000 (226/261) Important 2026-07-08
+2026-10-02 19:07:02,104 - INFO - CVE-2026-54513 (227/261) Important 2026-06-23
+2026-10-02 19:07:02,658 - INFO - CVE-2026-56434 (228/261) Moderate 2026-07-15
+2026-10-02 19:07:02,757 - INFO - CVE-2026-59083 (229/261) Low 2026-07-14
+2026-10-02 19:07:02,947 - INFO - CVE-2026-59084 (230/261) Low 2026-07-14
+2026-10-02 19:07:03,154 - INFO - CVE-2026-57231 (231/261) Important 2026-06-26
+2026-10-02 19:07:03,625 - WARNING - CVE-2026-59762 (232/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:03,811 - INFO - CVE-2026-6722 (233/261) Important 2026-05-10
+2026-10-02 19:07:03,961 - INFO - CVE-2026-6733 (234/261) Low 2026-06-17
+2026-10-02 19:07:04,075 - INFO - CVE-2026-60005 (235/261) Important 2026-07-15
+2026-10-02 19:07:04,599 - WARNING - CVE-2026-6914 (236/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:05,129 - WARNING - CVE-2026-8053 (237/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:05,282 - INFO - CVE-2026-7261 (238/261) Moderate 2026-05-10
+2026-10-02 19:07:05,421 - INFO - CVE-2026-6915 (239/261): does not affect Red Hat software.
+2026-10-02 19:07:05,744 - INFO - CVE-2026-6734 (240/261) Important 2026-06-17
+2026-10-02 19:07:06,191 - WARNING - CVE-2026-8200 (241/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:06,307 - INFO - CVE-2026-8177 (242/261) Important 2026-05-10
+2026-10-02 19:07:06,776 - WARNING - CVE-2026-8199 (243/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:07,240 - WARNING - CVE-2026-8202 (244/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:07,738 - WARNING - CVE-2026-8201 (245/261): DataError.HTTP_ERROR (HTTP status: 404)
+2026-10-02 19:07:07,877 - INFO - CVE-2026-8286 (246/261) Important 2026-07-03
+2026-10-02 19:07:08,110 - INFO - CVE-2026-8631 (247/261) Important 2026-05-20
+2026-10-02 19:07:08,253 - INFO - CVE-2026-8376 (248/261): does not affect Red Hat software.
+2026-10-02 19:07:08,389 - INFO - CVE-2026-8632 (249/261) Important 2026-05-20
+2026-10-02 19:07:08,538 - INFO - CVE-2026-8924 (250/261) Moderate 2026-07-03
+2026-10-02 19:07:08,691 - INFO - CVE-2026-8458 (251/261) Important 2026-07-03
+2026-10-02 19:07:08,919 - INFO - CVE-2026-9080 (252/261): does not affect Red Hat software.
+2026-10-02 19:07:09,078 - INFO - CVE-2026-8925 (253/261): does not affect Red Hat software.
+2026-10-02 19:07:09,202 - INFO - CVE-2026-8926 (254/261): does not affect Red Hat software.
+2026-10-02 19:07:09,325 - INFO - CVE-2026-9545 (255/261): does not affect Red Hat software.
+2026-10-02 19:07:09,542 - INFO - CVE-2026-9547 (256/261): does not affect Red Hat software.
+2026-10-02 19:07:09,786 - INFO - CVE-2026-9678 (257/261) Moderate 2026-06-17
+2026-10-02 19:07:09,909 - INFO - CVE-2026-8927 (258/261) Important 2026-07-03
+2026-10-02 19:07:10,052 - INFO - CVE-2026-9697 (259/261) Important 2026-06-17
+2026-10-02 19:07:10,169 - INFO - CVE-2026-9079 (260/261): does not affect Red Hat software.
+2026-10-02 19:07:10,385 - INFO - CVE-2026-9698 (261/261) Important 2026-06-09
