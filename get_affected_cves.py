@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 
 from enum import Enum, auto
-import sys
+#import sys
 from dataclasses import dataclass
 import requests
 # from datetime import datetime, timedelta
 from pathlib import Path
-from config import API_HOST, PROXIES, want_rhels, fix_states, affected_keys, package_keys, \
-                   REQ_TIME_OUT, CVE_INPUT_PATH
+from config import API_HOST, PROXIES, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS, \
+                   REQ_TIME_OUT, CVE_INPUT_PATH, \
+                   LOG_FORMAT, LOG_FILENAME, LOG_LEVEL, LOG_FILEMODE, LOG_MAX_BYTES, BACKUP_COUNT, LOG_ENCODING
+import logging
+
+logging.basicConfig(format=LOG_FORMAT, filename=LOG_FILENAME, level=LOG_LEVEL, filemode=LOG_FILEMODE, 
+                    encoding=LOG_ENCODING)
+
+logger = logging.getLogger(__name__)
 
 class DataError(Enum):
     NO_DATA = auto()
@@ -203,41 +210,48 @@ def main() -> None:
     try:
         cves = read_cves(CVE_INPUT_PATH)
     except FileNotFoundError:
-        print(f"Error: {CVE_INPUT_PATH} not found", file=sys.stderr)
+       # print(f"Error: {CVE_INPUT_PATH} not found", file=sys.stderr)
+        logger.error(f"Error: {CVE_INPUT_PATH} not found")
         return
     if not cves:
-        print(f"Error: {CVE_INPUT_PATH} is empty.", file=sys.stderr)
+        # print(f"Error: {CVE_INPUT_PATH} is empty.", file=sys.stderr)
+        logger.error(f"Error: {CVE_INPUT_PATH} is empty.")
         return
 
-    for cve in cves:
-        print('\n'+'*' * 100)
+    num_cves = len(cves)
+    logger.info(f"Processing {num_cves} CVEs from {CVE_INPUT_PATH}")
+
+    for count, cve in enumerate(cves, start=1):
+        #print('\n'+'*' * 100)
         endpoint = '/cve/' + cve + '.json'
         result = get_data(endpoint)
     
         if result.error is not None:
-            print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
+          #  print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
+          #  Todo: to be retried, but not implemented yet
+            logger.info(f"{cve} ({count}/{num_cves}): {result.error} (HTTP status: {result.status_code})")
             continue
 
         cve_data = result.data
+        
+        rhel_cve_data = filter_cve_data(cve_data, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS)
 
-        if cve_data.get('message') == 'Not Found' or ('package_state' not in cve_data and \
-                                                  'affected_release' not in cve_data):
-            print(cve + ' does not affect Red Hat software.')
-            continue
+        if not rhel_cve_data.affected_releases and not rhel_cve_data.package_states:
+            # print('does not affect Red Hat software.')
+            logger.warning(f"{cve} ({count}/{num_cves}): does not affect Red Hat software.")
+            continue    
 
-        rhel_cve_data = filter_cve_data(cve_data, want_rhels, fix_states, affected_keys, package_keys)
-
-        #print(rhel_cve_data.cve_name, "\n红帽有修复: ", rhel_cve_data.affected_releases, "\n红帽无修复: ", rhel_cve_data.package_states)
-        print(rhel_cve_data.cve_name)
-        print(rhel_cve_data.threat_severity, rhel_cve_data.public_date)
+        print('\n'+'*' * 100)
+        logger.info(f"{rhel_cve_data.cve_name} ({count}/{num_cves}) {rhel_cve_data.threat_severity} {rhel_cve_data.public_date}")
+        print(rhel_cve_data.cve_name, rhel_cve_data.threat_severity, rhel_cve_data.public_date)
         if rhel_cve_data.affected_releases:
             print_rhel_table(rhel_cve_data.affected_releases)
         else:
-            print("有修复部分: 红帽相关版本产品不受影响")
+            print("有修复部分:您所关注的RHEL版本不受影响")
         #if rhel_cve_data.package_states:
         #   print_rhel_table(rhel_cve_data.package_states)
         #else:
-         #  print("无修复部分: 红帽相关版本产品不受影响")
+         #  print("无修复部分: 您所关注的RHEL版本不受影响")
 
 if __name__ == "__main__":
     main()

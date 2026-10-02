@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 API_HOST = 'https://access.redhat.com/hydra/rest/securitydata'
@@ -12,7 +13,7 @@ REQ_TIME_OUT = 20
 
 CVE_INPUT_PATH = Path(__file__).resolve().parent / "input" / "cves.d260721.txt"
 
-want_rhels = {
+WANT_RHELS = {
                 "Red Hat Enterprise Linux 7", 
                 "Red Hat Enterprise Linux 7.3", 
                 "Red Hat Enterprise Linux 7.5",
@@ -24,7 +25,7 @@ want_rhels = {
              #   "Red Hat Enterprise Linux 9.6"
                 }
 
-fix_states = {
+FIX_STATES = {
                 "Affected",
                 "Fix deferred",
 #                "Not affected",
@@ -32,14 +33,23 @@ fix_states = {
 #                "Out of support scope",
                 }      
 
-affected_keys = [
+AFFECTED_KEYS = [
                 "product_name", 
                 "package", 
                 "advisory",
                 ]
 
-package_keys = [
+PACKAGE_KEYS = [
                 "product_name", 
                 "package_name", 
                 "fix_state",
                 ]
+
+LOG_FORMAT  = "%(asctime)s - %(levelname)s - %(message)s"
+LOG_FILENAME = Path(__file__).resolve().parent / "log" / "rhel_cve_fetcher.log"
+# LOG_LEVEL = logging.DEBUG MAY GET ADDITIONAL debug INFO FROM requests(URLLIB3)
+LOG_LEVEL = logging.INFO
+LOG_FILEMODE = "a"
+LOG_ENCODING = 'utf-8'
+LOG_MAX_BYTES = 1024 * 1024  # 1 MB NOT APPLICABLE TO logging.basicConfig()
+BACKUP_COUNT = 5 # NOT APPLICABLE TO logging.basicConfig() 
