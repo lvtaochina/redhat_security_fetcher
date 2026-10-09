@@ -7,12 +7,10 @@ import requests
 # from datetime import datetime, timedelta
 from pathlib import Path
 from config import API_HOST, PROXIES, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS, \
-                   REQ_TIME_OUT, CVE_INPUT_PATH, \
-                   LOG_FORMAT, LOG_FILENAME, LOG_LEVEL, LOG_FILEMODE, LOG_MAX_BYTES, BACKUP_COUNT, LOG_ENCODING
+                   REQ_TIME_OUT, CVE_INPUT_PATH, CVE_OUTPUT_PATH, \
+                   LOG_FORMAT, LOG_FILENAME, LOG_LEVEL, LOG_FILEMODE, LOG_ENCODING
 import logging
-
-logging.basicConfig(format=LOG_FORMAT, filename=LOG_FILENAME, level=LOG_LEVEL, filemode=LOG_FILEMODE, 
-                    encoding=LOG_ENCODING)
+import argparse
 
 logger = logging.getLogger(__name__)
 
@@ -22,11 +20,13 @@ class DataError(Enum):
     HTTP_ERROR = auto()
     REQUEST_EXCEPTION = auto()
 
+
 @dataclass
 class DataResult:
     data: dict | None
     error: DataError | None
     status_code: int | None
+
 
 @dataclass 
 class RhelCveData:
@@ -35,6 +35,19 @@ class RhelCveData:
     public_date: str
     affected_releases: dict[str, list[list[str]]]
     package_states: dict[str, list[list[str]]]
+
+
+def setup_logging() -> None:
+    logging.basicConfig(format=LOG_FORMAT, filename=LOG_FILENAME, level=LOG_LEVEL, filemode=LOG_FILEMODE, 
+                    encoding=LOG_ENCODING)
+    
+
+def get_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(add_help=True)
+    parser.add_argument('-i', '--input', type=Path, default=CVE_INPUT_PATH, help='Path to the input CVE file')
+    parser.add_argument('-o', '--output', type=Path, default=CVE_OUTPUT_PATH, help='Path to the output Report file')
+    return parser.parse_args()
+
 
 """
 get_data(endpoint: str) -> DataResult:
@@ -103,20 +116,18 @@ filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str],
                     -> RhelCveData:
 函数职责：
     处理一个 CVE API 响应数据
-
 输入：
     一个 CVE 对应的 JSON 数据
     目标 RHEL 版本集合
     允许的修复状态集合
     期望的键列表 -  affected_release 部分
     期望的键列表 -  package_state 部分
-
 处理：
     1. 处理一个 CVE API 响应数据，
     2. 从中提取 CVE 基本信息，
     3. 筛选指定 RHEL 版本的相关数据
-        - 处理有 FIX 的 affected_release 数据
-        - 处理无 FIX 的 package_state 数据
+       - 提取符合目标 RHEL 版本的 affected_release 数据
+       - 提取符合目标 RHEL 版本及 fix_state 条件的 package_state 数据
 返回：
     RhelCveData 对象，包含：
     - cve_name string
@@ -160,12 +171,12 @@ print_rhel_table(d:dict[str, list[list[str]]]) -> None
     处理: 格式化输出 RHEL 版本和对应数据
     返回: None
 """
-def print_rhel_table(d:dict[str, list[list[str]]]) -> None:
+def print_rhel_table(d:dict[str, list[list[str]]], file=None) -> None:
     for rhel_ver, item_list in d.items():
-        print(f"\n----{rhel_ver}----")
-        print(f"{'组件':<85}{'勘误编号':<20}")
+        print(f"\n----{rhel_ver}----", file=file)
+        print(f"{'组件':<85}{'勘误编号':<20}", file=file)
         for pkg, rhsa in item_list:
-            print(f"{pkg:<85}{rhsa:<20}")
+            print(f"{pkg:<85}{rhsa:<20}", file=file)
 
 
 """
@@ -192,7 +203,9 @@ main()
     函数职责: 主函数, 用于执行CVE数据获取和过滤逻辑
              * 未设计重试机制, 仅返回错误信息
     参数: N/A
-    数据来源: CVE_INPUT_PATH配置参数
+    数据来源:
+        CLI --input 参数；
+        未指定时使用 CVE_INPUT_PATH 默认值
     处理: 
         读取CVE数据文件
         处理相关异常
@@ -207,51 +220,57 @@ main()
     返回: None
 """
 def main() -> None:
+    # initialize argparse & logger
+    args = get_args()
+    setup_logging()
+
     try:
-        cves = read_cves(CVE_INPUT_PATH)
+        cves = read_cves(args.input)
     except FileNotFoundError:
        # print(f"Error: {CVE_INPUT_PATH} not found", file=sys.stderr)
-        logger.error(f"Error: {CVE_INPUT_PATH} not found")
+        logger.error(f"Error: {args.input} not found")
         return
     if not cves:
         # print(f"Error: {CVE_INPUT_PATH} is empty.", file=sys.stderr)
-        logger.error(f"Error: {CVE_INPUT_PATH} is empty.")
+        logger.error(f"Error: {args.input} is empty.")
         return
 
     num_cves = len(cves)
-    logger.info(f"Processing {num_cves} CVEs from {CVE_INPUT_PATH}")
+    logger.info(f"Start: Processing {num_cves} CVEs from {args.input}")
 
-    for count, cve in enumerate(cves, start=1):
-        #print('\n'+'*' * 100)
-        endpoint = '/cve/' + cve + '.json'
-        result = get_data(endpoint)
-    
-        if result.error is not None:
-          #  print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
-          #  Todo: to be retried, but not implemented yet
-            logger.info(f"{cve} ({count}/{num_cves}): {result.error} (HTTP status: {result.status_code})")
-            continue
-
-        cve_data = result.data
+    with args.output.open('w', encoding="utf-8") as f:
+        for count, cve in enumerate(cves, start=1):
+            #print('\n'+'*' * 100)
+            endpoint = '/cve/' + cve + '.json'
+            result = get_data(endpoint)
         
-        rhel_cve_data = filter_cve_data(cve_data, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS)
+            if result.error is not None:
+            #  print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
+            #  Todo: to be retried, but not implemented yet
+                logger.warning(f"{cve} ({count}/{num_cves}): {result.error} (HTTP status: {result.status_code})")
+                continue
 
-        if not rhel_cve_data.affected_releases and not rhel_cve_data.package_states:
-            # print('does not affect Red Hat software.')
-            logger.warning(f"{cve} ({count}/{num_cves}): does not affect Red Hat software.")
-            continue    
+            cve_data = result.data
+            
+            rhel_cve_data = filter_cve_data(cve_data, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS)
 
-        print('\n'+'*' * 100)
-        logger.info(f"{rhel_cve_data.cve_name} ({count}/{num_cves}) {rhel_cve_data.threat_severity} {rhel_cve_data.public_date}")
-        print(rhel_cve_data.cve_name, rhel_cve_data.threat_severity, rhel_cve_data.public_date)
-        if rhel_cve_data.affected_releases:
-            print_rhel_table(rhel_cve_data.affected_releases)
-        else:
-            print("有修复部分:您所关注的RHEL版本不受影响")
-        #if rhel_cve_data.package_states:
-        #   print_rhel_table(rhel_cve_data.package_states)
-        #else:
-         #  print("无修复部分: 您所关注的RHEL版本不受影响")
+            if not rhel_cve_data.affected_releases and not rhel_cve_data.package_states:
+                # print('does not affect Red Hat software.')
+                logger.info(f"{cve} ({count}/{num_cves}): does not affect Red Hat software.")
+                continue    
+
+            logger.info(f"{rhel_cve_data.cve_name} ({count}/{num_cves}) {rhel_cve_data.threat_severity} {rhel_cve_data.public_date}")
+
+            print('\n'+'*' * 100, file=f)
+            print(rhel_cve_data.cve_name, rhel_cve_data.threat_severity, rhel_cve_data.public_date, file=f)
+            if rhel_cve_data.affected_releases:
+                print_rhel_table(rhel_cve_data.affected_releases, file=f)
+            else:
+                print("有修复部分:您所关注的RHEL版本不受影响", file=f)
+            if rhel_cve_data.package_states:
+                print_rhel_table(rhel_cve_data.package_states, file=f)
+            else:
+                print("无修复部分:您所关注的RHEL版本不受影响", file=f)
 
 if __name__ == "__main__":
     main()
