@@ -12,7 +12,7 @@ REQ_TIME_OUT = 20
 # PROXIES = { "https" : HTTPS_PROXY }
 
 CVE_INPUT_PATH = Path(__file__).resolve().parent / "input" / "cves.d260721.txt"
-CVE_OUTPUT_PATH = Path(__file__).resolve().parent / "out" / "report.cves.txt"
+CVE_OUTPUT_PATH = Path(__file__).resolve().parent / "reports" / "report.cves.d260721.txt"
 
 WANT_RHELS = {
                 "Red Hat Enterprise Linux 7", 

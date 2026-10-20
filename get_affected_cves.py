@@ -21,12 +21,21 @@ class DataError(Enum):
     REQUEST_EXCEPTION = auto()
 
 
-@dataclass
-class DataResult:
-    data: dict | None
-    error: DataError | None
-    status_code: int | None
+#@dataclass
+#class DataResult:
+#    data: dict | None
+#    error: DataError | None
+#    status_code: int | None
 
+@dataclass
+class DataSuccess:
+    data: dict
+    status_code: int
+
+@dataclass
+class DataFail:
+    error: DataError
+    status_code: int | None
 
 @dataclass 
 class RhelCveData:
@@ -62,33 +71,39 @@ get_data(endpoint: str) -> DataResult:
     3. 将响应转换为 JSON
     4. 检查返回数据是否为空
 返回：
-    DataResult 对象，包含：
-        - data: dict | None
-        - error: DataError | None
+    DataFail 对象，包含：
+        - error: DataError
         - status_code: int | None
+    DataSuccess 对象，包含：
+        - data: dict
+        - status_code: int
 """
-def get_data(endpoint: str) -> DataResult:
+def get_data(endpoint: str) -> DataFail | DataSuccess:
 
     full_query = API_HOST + endpoint
 
     try:
         r = requests.get(full_query, proxies=PROXIES, timeout=REQ_TIME_OUT)
     except requests.RequestException:
-        return DataResult(data=None, error=DataError.REQUEST_EXCEPTION, status_code=None)   
+    #    return DataResult(data=None, error=DataError.REQUEST_EXCEPTION, status_code=None)
+        return DataFail(error=DataError.REQUEST_EXCEPTION, status_code=None)         
 
     if r.status_code != 200:
-        return DataResult(data=None, error=DataError.HTTP_ERROR, status_code=r.status_code)
-    
+    #    return DataResult(data=None, error=DataError.HTTP_ERROR, status_code=r.status_code)
+        return DataFail(error=DataError.HTTP_ERROR, status_code=r.status_code)
+        
     try:
         data = r.json()
     except ValueError:
-        return DataResult(data=None, error=DataError.INVALID_JSON, status_code=r.status_code)
+    #    return DataResult(data=None, error=DataError.INVALID_JSON, status_code=r.status_code)
+        return DataFail(error=DataError.INVALID_JSON, status_code=r.status_code)
 
     if not data:
-        return DataResult(data=None, error=DataError.NO_DATA, status_code=r.status_code)
+    #    return DataResult(data=None, error=DataError.NO_DATA, status_code=r.status_code)
+        return DataFail(error=DataError.NO_DATA, status_code=r.status_code)
 
-    return DataResult(data=data, error=None, status_code=r.status_code)
-
+    # return DataResult(data=data, error=None, status_code=r.status_code)
+    return DataSuccess(data=data, status_code=r.status_code)
 
 """
 add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
@@ -182,11 +197,11 @@ def print_rhel_table(d:dict[str, list[list[str]]], file=None) -> None:
 """
 read_cves()
     函数职责: 将CVE IDs读入list
-    参数: 指定的CVE文件路径的配置参数
+    参数: 指定CVE文件路径的配置参数
     处理：逐行读取，去除空白，忽略空行
     返回: list[str]
-    异常:input/cves.txt不存在 -> 异常自然传播到主函数
-         cves.txt为空 -> 无异常, 直接由main()处理
+    异常:input/cves.txt不存在 -> 异常自然传播到调用函数
+         cves.txt为空 -> 返回空列表，无异常
          文件打不开→相应的 OSError ->异常自然传播 
          文件编码有问题→UnicodeDecodeError ->异常自然传播
          cves.txt内容或格式非法 -> todo 
@@ -244,7 +259,8 @@ def main() -> None:
             endpoint = '/cve/' + cve + '.json'
             result = get_data(endpoint)
         
-            if result.error is not None:
+            #if result.error is not None:
+            if isinstance(result, DataFail):
             #  print(f"{cve}: {result.error} (HTTP status: {result.status_code})") 
             #  Todo: to be retried, but not implemented yet
                 logger.warning(f"{cve} ({count}/{num_cves}): {result.error} (HTTP status: {result.status_code})")
