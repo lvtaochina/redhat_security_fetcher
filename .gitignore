@@ -1,6 +1,12 @@
 # 报告不需要版本管理
 reports/
 
+# 真实业务不需要版本管理
+input/
+
+# 例外：保留示例 CVE 文件
+!/input/cves.example.txt
+
 # 日志不需要版本管理
 log/
     
@@ -10,3 +16,5 @@ tests/__pycache__/
 
 #虚拟环境不需要版本管理
 .venv/
+
+todo
