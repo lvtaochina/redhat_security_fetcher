@@ -52,5 +52,3 @@ LOG_FILENAME = Path(__file__).resolve().parent / "log" / "rhel_cve_fetcher.log"
 LOG_LEVEL = logging.INFO
 LOG_FILEMODE = "a"
 LOG_ENCODING = 'utf-8'
-LOG_MAX_BYTES = 1024 * 1024  # 1 MB NOT APPLICABLE TO logging.basicConfig()
-BACKUP_COUNT = 5 # NOT APPLICABLE TO logging.basicConfig() 

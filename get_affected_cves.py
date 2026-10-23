@@ -1,41 +1,16 @@
 #!/usr/bin/env python3
 
-from enum import Enum, auto
-#import sys
 from dataclasses import dataclass
-import requests
-# from datetime import datetime, timedelta
+from api_client import get_data, DataFail
 from pathlib import Path
-from config import API_HOST, PROXIES, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS, \
-                   REQ_TIME_OUT, CVE_INPUT_PATH, CVE_OUTPUT_PATH, \
+from config import WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS, \
+                   CVE_INPUT_PATH, CVE_OUTPUT_PATH, \
                    LOG_FORMAT, LOG_FILENAME, LOG_LEVEL, LOG_FILEMODE, LOG_ENCODING
 import logging
 import argparse
 
 logger = logging.getLogger(__name__)
 
-class DataError(Enum):
-    NO_DATA = auto()
-    INVALID_JSON = auto()
-    HTTP_ERROR = auto()
-    REQUEST_EXCEPTION = auto()
-
-
-#@dataclass
-#class DataResult:
-#    data: dict | None
-#    error: DataError | None
-#    status_code: int | None
-
-@dataclass
-class DataSuccess:
-    data: dict
-    status_code: int
-
-@dataclass
-class DataFail:
-    error: DataError
-    status_code: int | None
 
 @dataclass 
 class RhelCveData:
@@ -47,6 +22,7 @@ class RhelCveData:
 
 
 def setup_logging() -> None:
+    LOG_FILENAME.parent.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(format=LOG_FORMAT, filename=LOG_FILENAME, level=LOG_LEVEL, filemode=LOG_FILEMODE, 
                     encoding=LOG_ENCODING)
     
@@ -57,53 +33,6 @@ def get_args() -> argparse.Namespace:
     parser.add_argument('-o', '--output', type=Path, default=CVE_OUTPUT_PATH, help='Path to the output Report file')
     return parser.parse_args()
 
-
-"""
-get_data(endpoint: str) -> DataResult:
-函数职责：从指定端点获取数据
-参数：
-    endpoint: str
-    例如：
-    "/cve/CVE-2026-1234.json"
-处理(包含异常处理):
-    1. 使用 requests 发起 HTTP 请求并返回数据
-    2. 检查 HTTP 状态码
-    3. 将响应转换为 JSON
-    4. 检查返回数据是否为空
-返回：
-    DataFail 对象，包含：
-        - error: DataError
-        - status_code: int | None
-    DataSuccess 对象，包含：
-        - data: dict
-        - status_code: int
-"""
-def get_data(endpoint: str) -> DataFail | DataSuccess:
-
-    full_query = API_HOST + endpoint
-
-    try:
-        r = requests.get(full_query, proxies=PROXIES, timeout=REQ_TIME_OUT)
-    except requests.RequestException:
-    #    return DataResult(data=None, error=DataError.REQUEST_EXCEPTION, status_code=None)
-        return DataFail(error=DataError.REQUEST_EXCEPTION, status_code=None)         
-
-    if r.status_code != 200:
-    #    return DataResult(data=None, error=DataError.HTTP_ERROR, status_code=r.status_code)
-        return DataFail(error=DataError.HTTP_ERROR, status_code=r.status_code)
-        
-    try:
-        data = r.json()
-    except ValueError:
-    #    return DataResult(data=None, error=DataError.INVALID_JSON, status_code=r.status_code)
-        return DataFail(error=DataError.INVALID_JSON, status_code=r.status_code)
-
-    if not data:
-    #    return DataResult(data=None, error=DataError.NO_DATA, status_code=r.status_code)
-        return DataFail(error=DataError.NO_DATA, status_code=r.status_code)
-
-    # return DataResult(data=data, error=None, status_code=r.status_code)
-    return DataSuccess(data=data, status_code=r.status_code)
 
 """
 add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
@@ -126,7 +55,7 @@ def add_to_dict[K, V](d: dict[K, list[V]], key: K, value: V) -> None:
 
 
 """
-filter_rhel_data(data: dict, want_rhels: set[str], fix_states: set[str], 
+filter_cve_data(data: dict, want_rhels: set[str], fix_states: set[str], 
                     affected_want_keys: list[str], package_want_keys: list[str]) \
                     -> RhelCveData:
 函数职责：
@@ -200,7 +129,7 @@ read_cves()
     参数: 指定CVE文件路径的配置参数
     处理：逐行读取，去除空白，忽略空行
     返回: list[str]
-    异常:input/cves.txt不存在 -> 异常自然传播到调用函数
+    异常:cves_path不存在 -> 异常自然传播到调用函数
          cves.txt为空 -> 返回空列表，无异常
          文件打不开→相应的 OSError ->异常自然传播 
          文件编码有问题→UnicodeDecodeError ->异常自然传播
@@ -242,17 +171,19 @@ def main() -> None:
     try:
         cves = read_cves(args.input)
     except FileNotFoundError:
-       # print(f"Error: {CVE_INPUT_PATH} not found", file=sys.stderr)
+        print(f"Error: {args.input} not found")
         logger.error(f"Error: {args.input} not found")
         return
+
     if not cves:
-        # print(f"Error: {CVE_INPUT_PATH} is empty.", file=sys.stderr)
+        print(f"Error: {args.input} is empty.")
         logger.error(f"Error: {args.input} is empty.")
         return
 
     num_cves = len(cves)
     logger.info(f"Start: Processing {num_cves} CVEs from {args.input}")
 
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open('w', encoding="utf-8") as f:
         for count, cve in enumerate(cves, start=1):
             #print('\n'+'*' * 100)
@@ -271,8 +202,8 @@ def main() -> None:
             rhel_cve_data = filter_cve_data(cve_data, WANT_RHELS, FIX_STATES, AFFECTED_KEYS, PACKAGE_KEYS)
 
             if not rhel_cve_data.affected_releases and not rhel_cve_data.package_states:
-                # print('does not affect Red Hat software.')
-                logger.info(f"{cve} ({count}/{num_cves}): does not affect Red Hat software.")
+                # print('no matching records for the configured RHEL versions and fix states.')
+                logger.info(f"{cve} ({count}/{num_cves}): no matching records for the configured RHEL versions and fix states.")
                 continue    
 
             logger.info(f"{rhel_cve_data.cve_name} ({count}/{num_cves}) {rhel_cve_data.threat_severity} {rhel_cve_data.public_date}")
@@ -282,11 +213,11 @@ def main() -> None:
             if rhel_cve_data.affected_releases:
                 print_rhel_table(rhel_cve_data.affected_releases, file=f)
             else:
-                print("有修复部分:您所关注的RHEL版本不受影响", file=f)
+                print("未查询到符合条件的 affected_release 记录", file=f)
             if rhel_cve_data.package_states:
                 print_rhel_table(rhel_cve_data.package_states, file=f)
             else:
-                print("无修复部分:您所关注的RHEL版本不受影响", file=f)
+                print("未查询到符合条件的 package_state 记录", file=f)
 
 if __name__ == "__main__":
     main()
