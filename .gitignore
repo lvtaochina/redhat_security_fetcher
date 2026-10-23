@@ -2,7 +2,7 @@
 reports/
 
 # 真实业务不需要版本管理
-input/
+/input/*
 
 # 例外：保留示例 CVE 文件
 !/input/cves.example.txt
