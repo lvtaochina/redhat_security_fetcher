@@ -39,6 +39,12 @@ redhat_security_fetcher/
 建议在项目根目录使用独立的虚拟环境。
 
 ```bash
+# 创建项目目录
+mkdir redhat_security_generator/
+
+# 克隆代码库到本地目录
+git clone git@github.com:lvtaochina/redhat_security_fetcher.git ./
+
 # 创建虚拟环境
 python3 -m venv .venv
 

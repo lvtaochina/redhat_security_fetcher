@@ -40,6 +40,12 @@ The example input file `input/cves.example.txt` is included with the project. Yo
 It is recommended to use a dedicated virtual environment in the project root directory.
 
 ```bash
+# create project directory
+mkdir redhat_security_generator/
+
+# clone project
+git clone git@github.com:lvtaochina/redhat_security_fetcher.git ./
+
 # Create the virtual environment
 python3 -m venv .venv
 
